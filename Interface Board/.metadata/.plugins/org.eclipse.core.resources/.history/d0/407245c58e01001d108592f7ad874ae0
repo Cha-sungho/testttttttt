@@ -1,0 +1,26 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../phoenixon/app/comm/ui_op/app_ui_op.c 
+
+C_DEPS += \
+./phoenixon/app/comm/ui_op/app_ui_op.d 
+
+OBJS += \
+./phoenixon/app/comm/ui_op/app_ui_op.obj 
+
+OBJS__QUOTED += \
+"phoenixon\app\comm\ui_op\app_ui_op.obj" 
+
+C_DEPS__QUOTED += \
+"phoenixon\app\comm\ui_op\app_ui_op.d" 
+
+C_SRCS__QUOTED += \
+"../phoenixon/app/comm/ui_op/app_ui_op.c" 
+
+

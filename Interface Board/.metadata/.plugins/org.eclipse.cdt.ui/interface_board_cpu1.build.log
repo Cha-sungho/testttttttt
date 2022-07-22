@@ -1,0 +1,8 @@
+
+**** Build of configuration Debug for project interface_board_cpu1 ****
+
+"C:\\ti\\ccs1031\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'interface_board_cpu1.out' is up to date.
+
+**** Build Finished ****

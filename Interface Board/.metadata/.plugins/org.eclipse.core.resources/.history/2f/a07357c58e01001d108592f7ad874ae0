@@ -1,0 +1,44 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../phoenixon/dsp/usb/fat_usbmsc.c \
+../phoenixon/dsp/usb/ff.c \
+../phoenixon/dsp/usb/usb_hal.c \
+../phoenixon/dsp/usb/ustdlib.c 
+
+C_DEPS += \
+./phoenixon/dsp/usb/fat_usbmsc.d \
+./phoenixon/dsp/usb/ff.d \
+./phoenixon/dsp/usb/usb_hal.d \
+./phoenixon/dsp/usb/ustdlib.d 
+
+OBJS += \
+./phoenixon/dsp/usb/fat_usbmsc.obj \
+./phoenixon/dsp/usb/ff.obj \
+./phoenixon/dsp/usb/usb_hal.obj \
+./phoenixon/dsp/usb/ustdlib.obj 
+
+OBJS__QUOTED += \
+"phoenixon\dsp\usb\fat_usbmsc.obj" \
+"phoenixon\dsp\usb\ff.obj" \
+"phoenixon\dsp\usb\usb_hal.obj" \
+"phoenixon\dsp\usb\ustdlib.obj" 
+
+C_DEPS__QUOTED += \
+"phoenixon\dsp\usb\fat_usbmsc.d" \
+"phoenixon\dsp\usb\ff.d" \
+"phoenixon\dsp\usb\usb_hal.d" \
+"phoenixon\dsp\usb\ustdlib.d" 
+
+C_SRCS__QUOTED += \
+"../phoenixon/dsp/usb/fat_usbmsc.c" \
+"../phoenixon/dsp/usb/ff.c" \
+"../phoenixon/dsp/usb/usb_hal.c" \
+"../phoenixon/dsp/usb/ustdlib.c" 
+
+

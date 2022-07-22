@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="completion_proposal_size">
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+	</section>
+	<section name="PDOMSearchPage">
+		<item key="caseSensitive" value="false"/>
+		<item key="searchFlags" value="227191"/>
+		<list key="previousPatterns">
+			<item value="can_rx_cmd_output_relay_on"/>
+			<item value="can_rx_cmd_stop"/>
+			<item value="can_op_stop"/>
+			<item value="app_CommUIOpRun"/>
+			<item value="app_ui_tcp_state_table"/>
+			<item value="cb_Start"/>
+			<item value="end_condwatt"/>
+			<item value="app_CommCanOpRun"/>
+			<item value="app_CommCanOpRecvProc"/>
+			<item value="app_CommCanOpMsgSeqCheckEndCondition"/>
+			<item value="d_res_end_cond_capa"/>
+			<item value="can_msgchannelrxvol"/>
+			<item value="TODO"/>
+			<item value="can_msgchannelend_condcapa"/>
+			<item value="end_cond_capa_00"/>
+			<item value="SOCK_ESTABLISHED"/>
+			<item value="cb_TcpEstablished"/>
+			<item value="OpParser"/>
+			<item value="app_ui_cmd_table"/>
+			<item value="cb_Data"/>
+			<item value="total_step"/>
+			<item value="app_CommCanOpPowerUpdateVar"/>
+			<item value="gp_sdram"/>
+			<item value="OpSender"/>
+			<item value="drv_can_msg"/>
+			<item value="app_CommCanOpMsgSeqSend"/>
+			<item value="drv_WriteCAN"/>
+			<item value="app_CommCanOpMainProc"/>
+			<item value="cmd_in_rly_on"/>
+			<item value="can_tx_cmd_input_relay_on"/>
+			<item value="CommCanTxCMDList"/>
+			<item value="AppCommCanOpHandle"/>
+			<item value="AppCommCanOpStateList"/>
+			<item value="app_CommCanOpRecipeUpdate"/>
+		</list>
+	</section>
+</section>
