@@ -6,30 +6,30 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 ASM_SRCS += \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_DBGIER.asm \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_usDelay.asm 
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_DBGIER.asm \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_usDelay.asm 
 
 C_SRCS += \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Adc.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_CpuTimers.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_DefaultISR.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Dma.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_GlobalVariableDefs.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Gpio.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_I2C.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc_Driver.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc_Driver_Lite.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc_Driver_Util.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Mcbsp.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_PieCtrl.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_PieVect.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Sci.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_SysCtrl.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_can.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_sci_io.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_sdfm_drivers.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_struct.c 
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Adc.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_CpuTimers.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_DefaultISR.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Dma.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_GlobalVariableDefs.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Gpio.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_I2C.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc_Driver.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc_Driver_Lite.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc_Driver_Util.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Mcbsp.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_PieCtrl.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_PieVect.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Sci.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_SysCtrl.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_can.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_sci_io.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_sdfm_drivers.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_struct.c 
 
 C_DEPS += \
 ./dsp/c2000_sdk/v400/f2837xd/F2837xD_Adc.d \
@@ -132,29 +132,29 @@ ASM_DEPS__QUOTED += \
 "dsp\c2000_sdk\v400\f2837xd\F2837xD_usDelay.d" 
 
 C_SRCS__QUOTED += \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Adc.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_CpuTimers.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_DefaultISR.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Dma.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_GlobalVariableDefs.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Gpio.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_I2C.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc_Driver.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc_Driver_Lite.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc_Driver_Util.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Mcbsp.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_PieCtrl.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_PieVect.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Sci.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_SysCtrl.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_can.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_sci_io.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_sdfm_drivers.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_struct.c" 
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Adc.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_CpuTimers.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_DefaultISR.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Dma.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_GlobalVariableDefs.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Gpio.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_I2C.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc_Driver.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc_Driver_Lite.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc_Driver_Util.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Mcbsp.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_PieCtrl.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_PieVect.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_Sci.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_SysCtrl.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_can.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_sci_io.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_sdfm_drivers.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_struct.c" 
 
 ASM_SRCS__QUOTED += \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_DBGIER.asm" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_usDelay.asm" 
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_DBGIER.asm" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/F2837xD_usDelay.asm" 
 
 

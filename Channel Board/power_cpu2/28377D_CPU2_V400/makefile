@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS
+CG_TOOL_ROOT := C:/ti/ccs1031/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -58,22 +58,22 @@ ORDERED_OBJS += \
 "./phoenixon/utils/ringbuffer.obj" \
 "./phoenixon/utils/util_adc.obj" \
 "./phoenixon/utils/util_sort.obj" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/flash_api/f2837xd/lib/F021_API_F2837xD_FPU32.lib" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Debug/driverlib.lib" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Debug/driverlib_coff.lib" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Debug/driverlib_eabi.lib" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Release/driverlib.lib" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Release/driverlib_coff.lib" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Release/driverlib_eabi.lib" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28.lib" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28_coff.lib" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28_driverlib.lib" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28_driverlib_coff.lib" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28_driverlib_eabi.lib" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28_eabi.lib" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/flash_api/f2837xd/lib/F021_API_F2837xD.lib" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/flash_api/f2837xd/lib/F021_API_F2837xD_EABI.lib" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/flash_api/f2837xd/lib/F021_API_F2837xD_FPU32_EABI.lib" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/flash_api/f2837xd/lib/F021_API_F2837xD_FPU32.lib" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Debug/driverlib.lib" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Debug/driverlib_coff.lib" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Debug/driverlib_eabi.lib" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Release/driverlib.lib" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Release/driverlib_coff.lib" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Release/driverlib_eabi.lib" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28.lib" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28_coff.lib" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28_driverlib.lib" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28_driverlib_coff.lib" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28_driverlib_eabi.lib" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28_eabi.lib" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/flash_api/f2837xd/lib/F021_API_F2837xD.lib" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/flash_api/f2837xd/lib/F021_API_F2837xD_EABI.lib" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/dsp/c2000_sdk/v400/f2837xd/libraries/flash_api/f2837xd/lib/F021_API_F2837xD_FPU32_EABI.lib" \
 "../dsp/cmd/2837xD_FLASH_lnk_cpu2.cmd" \
 "../dsp/cmd/F2837xD_Headers_nonBIOS_cpu2.cmd" \
 $(GEN_CMDS__FLAG) \
@@ -242,14 +242,14 @@ all: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 power_cpu2.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -Ooff --fp_mode=strict --advice:performance=all --define=ccs_c2k --define=_28377D --define=_DUAL_HEADERS --define=_FLASH --define=DEBUG --define=CPU2 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"power_cpu2.map" --heap_size=0x200 --stack_size=0x100 --warn_sections -i"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/lib" -i"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="power_cpu2_linkInfo.xml" --entry_point=code_start --rom_model -o "power_cpu2.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1031/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -Ooff --fp_mode=strict --advice:performance=all --define=ccs_c2k --define=_28377D --define=_DUAL_HEADERS --define=_FLASH --define=DEBUG --define=CPU2 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"power_cpu2.map" --heap_size=0x200 --stack_size=0x100 --warn_sections -i"C:/ti/ccs1031/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/lib" -i"C:/ti/ccs1031/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="power_cpu2_linkInfo.xml" --entry_point=code_start --rom_model -o "power_cpu2.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 power_cpu2.hex: $(EXE_OUTPUTS)
 	@echo 'Building secondary target: "$@"'
 	@echo 'Invoking: C2000 Hex Utility'
-	"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/hex2000" --diag_wrap=off -o "power_cpu2.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccs1031/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/hex2000" --diag_wrap=off -o "power_cpu2.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building secondary target: "$@"'
 	@echo ' '
 

@@ -6,9 +6,9 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-C:/Users/PHOENIXON/Documents/11121E-00_11122E-00_NorthVolt_5V100A_Formation_Channel/Channel\ Board/power_cpu1/phoenixon/utils/ringbuffer.c \
-C:/Users/PHOENIXON/Documents/11121E-00_11122E-00_NorthVolt_5V100A_Formation_Channel/Channel\ Board/power_cpu1/phoenixon/utils/util_adc.c \
-C:/Users/PHOENIXON/Documents/11121E-00_11122E-00_NorthVolt_5V100A_Formation_Channel/Channel\ Board/power_cpu1/phoenixon/utils/util_sort.c 
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/phoenixon/utils/ringbuffer.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/phoenixon/utils/util_adc.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/phoenixon/utils/util_sort.c 
 
 C_DEPS += \
 ./phoenixon/utils/ringbuffer.d \
@@ -31,8 +31,8 @@ C_DEPS__QUOTED += \
 "phoenixon\utils\util_sort.d" 
 
 C_SRCS__QUOTED += \
-"C:/Users/PHOENIXON/Documents/11121E-00_11122E-00_NorthVolt_5V100A_Formation_Channel/Channel Board/power_cpu1/phoenixon/utils/ringbuffer.c" \
-"C:/Users/PHOENIXON/Documents/11121E-00_11122E-00_NorthVolt_5V100A_Formation_Channel/Channel Board/power_cpu1/phoenixon/utils/util_adc.c" \
-"C:/Users/PHOENIXON/Documents/11121E-00_11122E-00_NorthVolt_5V100A_Formation_Channel/Channel Board/power_cpu1/phoenixon/utils/util_sort.c" 
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/phoenixon/utils/ringbuffer.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/phoenixon/utils/util_adc.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/phoenixon/utils/util_sort.c" 
 
 

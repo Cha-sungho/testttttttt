@@ -6,8 +6,8 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/phoenixon/app_formation/app/app_op.c \
-D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/phoenixon/app_formation/app/app_settings.c 
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/phoenixon/app_formation/app/app_op.c \
+C:/Users/PHOENIXON/Documents/testttttttt/Channel\ Board/power_cpu1/phoenixon/app_formation/app/app_settings.c 
 
 C_DEPS += \
 ./phoenixon/app_formation/app/app_op.d \
@@ -26,7 +26,7 @@ C_DEPS__QUOTED += \
 "phoenixon\app_formation\app\app_settings.d" 
 
 C_SRCS__QUOTED += \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/phoenixon/app_formation/app/app_op.c" \
-"D:/1.Phoenixon_Work/06.Ccs_Workspace/04.Fomation5V100A/4_Channel_card/Formation_Channel/power_cpu1/phoenixon/app_formation/app/app_settings.c" 
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/phoenixon/app_formation/app/app_op.c" \
+"C:/Users/PHOENIXON/Documents/testttttttt/Channel Board/power_cpu1/phoenixon/app_formation/app/app_settings.c" 
 
 
