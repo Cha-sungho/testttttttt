@@ -13,7 +13,7 @@
 #pragma CODE_SECTION(drv_CheckSdram, ".TI.ramfunc");
 
 unsigned long ErrCount_local = 0;
-unsigned int  ErrCount = 0;
+unsigned int ErrCount = 0;
 unsigned long Counter = 0;
 
 Uint32 drv_InitSdram(void)
@@ -21,7 +21,7 @@ Uint32 drv_InitSdram(void)
     Uint16 ui_Check = 0;
 
     drv_ClearSdram(SDRAM_BASE_ADDRESS, SDRAM_LENGTH);
-    ui_Check=1;
+    ui_Check = 1;
     return (ui_Check);
 }
 
@@ -31,9 +31,7 @@ void drv_ClearSdram(Uint32 Ul_Address, Uint32 ul_Size)
     Uint32 memWdl = 0x0;
 
     for (ul_i = 0; ul_i < ul_Size; ul_i++) {
-        //memcpy((Uint32*) Ul_Address + ul_i, &memWdl, 2);
         memcpy_fast_far((Uint32*) Ul_Address + ul_i, &memWdl, 2);
-//        memset_fast((Uint32*) Ul_Address + ul_i, (Uint16)memWdl, 2);
     }
 }
 
@@ -76,5 +74,4 @@ Uint32 drv_CheckSdram(Uint32 Ul_Address, Uint32 ul_Size)
     }
     return (ErrorCount);
 }
-
 

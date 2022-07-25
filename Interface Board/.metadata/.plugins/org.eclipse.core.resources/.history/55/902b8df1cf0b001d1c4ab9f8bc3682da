@@ -1,0 +1,62 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../phoenixon/drv/drv_can.c \
+../phoenixon/drv/drv_emif.c \
+../phoenixon/drv/drv_gpio.c \
+../phoenixon/drv/drv_sdram.c \
+../phoenixon/drv/drv_timer.c \
+../phoenixon/drv/drv_usb.c \
+../phoenixon/drv/drv_w5300.c 
+
+C_DEPS += \
+./phoenixon/drv/drv_can.d \
+./phoenixon/drv/drv_emif.d \
+./phoenixon/drv/drv_gpio.d \
+./phoenixon/drv/drv_sdram.d \
+./phoenixon/drv/drv_timer.d \
+./phoenixon/drv/drv_usb.d \
+./phoenixon/drv/drv_w5300.d 
+
+OBJS += \
+./phoenixon/drv/drv_can.obj \
+./phoenixon/drv/drv_emif.obj \
+./phoenixon/drv/drv_gpio.obj \
+./phoenixon/drv/drv_sdram.obj \
+./phoenixon/drv/drv_timer.obj \
+./phoenixon/drv/drv_usb.obj \
+./phoenixon/drv/drv_w5300.obj 
+
+OBJS__QUOTED += \
+"phoenixon\drv\drv_can.obj" \
+"phoenixon\drv\drv_emif.obj" \
+"phoenixon\drv\drv_gpio.obj" \
+"phoenixon\drv\drv_sdram.obj" \
+"phoenixon\drv\drv_timer.obj" \
+"phoenixon\drv\drv_usb.obj" \
+"phoenixon\drv\drv_w5300.obj" 
+
+C_DEPS__QUOTED += \
+"phoenixon\drv\drv_can.d" \
+"phoenixon\drv\drv_emif.d" \
+"phoenixon\drv\drv_gpio.d" \
+"phoenixon\drv\drv_sdram.d" \
+"phoenixon\drv\drv_timer.d" \
+"phoenixon\drv\drv_usb.d" \
+"phoenixon\drv\drv_w5300.d" 
+
+C_SRCS__QUOTED += \
+"../phoenixon/drv/drv_can.c" \
+"../phoenixon/drv/drv_emif.c" \
+"../phoenixon/drv/drv_gpio.c" \
+"../phoenixon/drv/drv_sdram.c" \
+"../phoenixon/drv/drv_timer.c" \
+"../phoenixon/drv/drv_usb.c" \
+"../phoenixon/drv/drv_w5300.c" 
+
+

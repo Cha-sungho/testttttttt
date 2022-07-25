@@ -15,7 +15,7 @@
 #include "loopback.h"
 #include "Types.h"
 
-#define RACK_NUMBER     2           // Need to change this number
+#define RACK_NUMBER     2   // Need to change this number
 
 #define VERSION_LEN     50
 #define DEVNAME_LEN     50
@@ -50,7 +50,6 @@ void main(void)
     Interrupt_enableMaster();       // Enable Interrupts
 
     EINT;                           // Enable Global Interrupt (INTM)
-
     ERTM;                           // Enable realtime interrupt (DBGM)
 
     LED_FLAG = drv_InitSdram();     // SDRAM initialize(30s)

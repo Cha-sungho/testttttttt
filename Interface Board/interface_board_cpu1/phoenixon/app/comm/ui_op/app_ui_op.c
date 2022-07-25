@@ -54,21 +54,21 @@ const AppCommUIOpInitVal app_ui_tcp_init_val = {
 
 const AppCommUIOpSockState app_ui_tcp_state_table[] =
 {
- { SOCK_ESTABLISHED, cb_TcpEstablished },
- { SOCK_CLOSE_WAIT,  cb_TcpClosedWait },
- { SOCK_INIT,        cb_TcpListen },
- { SOCK_CLOSED,      cb_TcpClosed },
- { 0,                NULL }
+    { SOCK_ESTABLISHED, cb_TcpEstablished },
+    { SOCK_CLOSE_WAIT,  cb_TcpClosedWait },
+    { SOCK_INIT,        cb_TcpListen },
+    { SOCK_CLOSED,      cb_TcpClosed },
+    { 0,                NULL }
 };
 
 const AppUICmdState app_ui_cmd_table[] =
 {
- { head_data,    cb_Data },
- { head_jump,    cb_Jump },
- { head_cmd,     cb_Command },
- { head_start,   cb_Start },
- { head_pause,   cb_Pause },
- { head_none,    NULL }
+    { head_data,    cb_Data },
+    { head_jump,    cb_Jump },
+    { head_cmd,     cb_Command },
+    { head_start,   cb_Start },
+    { head_pause,   cb_Pause },
+    { head_none,    NULL }
 };
 
 volatile TotalStepLog *gp_sdram[4];
@@ -128,17 +128,14 @@ static void cb_TcpEstablished(uint16_t sock, uint16_t type, uint16_t port)
     }
 
     ret = OpParser(sock);
-    if(ret != op_error_none) {
+    if (ret != op_error_none) {
         printf("%s-%s-%d\r\n", __FILE__, __FUNCTION__, __LINE__);
         CommUIOpMsgHandleInit();
     }
 
-    //XXX Sender channel 방식 생각해야할듯 ?
-    for(i=0;i<MAX_CHANNEL;i++)
-    {
+    for (i = 0; i < MAX_CHANNEL; i++) {
         ret = OpSender(sock, i);
-        if(ret != op_error_none) {
-//            printf("%s-%s-%d\r\n", __FILE__, __FUNCTION__, __LINE__);
+        if (ret != op_error_none) {
         }
     }
 }
@@ -149,10 +146,11 @@ static void cb_TcpClosedWait(uint16_t sock, uint16_t type, uint16_t port)
 
     printf("%s-%s-%d %d: UI TCP server close wait\r\n", __FILE__, __FUNCTION__, __LINE__, sock);
 
-    if ((ret = disconnect(sock)) != SOCK_OK)
+    if ((ret = disconnect(sock)) != SOCK_OK) {
         printf("%s-%s-%d %d: UI TCP server close error %ld\r\n", __FILE__, __FUNCTION__, __LINE__, sock, ret);
-    else
+    } else {
         printf("%s-%s-%d %d: UI TCP server closed\r\n", __FILE__, __FUNCTION__, __LINE__, sock);
+    }
 }
 
 static void cb_TcpListen(uint16_t sock, uint16_t type, uint16_t port)
@@ -161,10 +159,11 @@ static void cb_TcpListen(uint16_t sock, uint16_t type, uint16_t port)
 
     printf("%s-%s-%d %d: UI TCP server listen\r\n", __FILE__, __FUNCTION__, __LINE__, sock);
 
-    if ((ret = listen(sock)) != SOCK_OK)
+    if ((ret = listen(sock)) != SOCK_OK) {
         printf("%s-%s-%d %d: UI TCP server listen error %ld\r\n", __FILE__, __FUNCTION__, __LINE__, sock, ret);
-    else
+    } else {
         printf("%s-%s-%d %d: UI TCP server listened\r\n", __FILE__, __FUNCTION__, __LINE__, sock);
+    }
 }
 
 static void cb_TcpClosed(uint16_t sock, uint16_t type, uint16_t port)
@@ -173,11 +172,10 @@ static void cb_TcpClosed(uint16_t sock, uint16_t type, uint16_t port)
 
     printf("%s-%s-%d %d: UI TCP server start\r\n", __FILE__, __FUNCTION__, __LINE__, sock);
 
-    if ((ret = socket(sock, type, port, 0x00)) != sock)
+    if ((ret = socket(sock, type, port, 0x00)) != sock) {
         printf("%s-%s-%d %d: UI TCP server open error %ld\r\n", __FILE__, __FUNCTION__, __LINE__, sock, ret);
-    else {
+    } else {
         CommUIOpMsgHandleInit();
-        //setSn_KPALVTR(sock, 1);
         printf("%s-%s-%d %d: UI TCP server opened\r\n", __FILE__, __FUNCTION__, __LINE__, sock);
     }
 }
@@ -189,20 +187,18 @@ static AppCommUIOpErrList OpParser(uint16_t sock)
     uint16_t i;
 
     if (size > 0) {
-        //printf("%s-%s-%d %d: recv size - %u\r\n", __FILE__, __FUNCTION__, __LINE__, sock, size);
-
         if (ui_msg_rx.recv.remain_step_cnt == 0) {
-            //Header, Channel, Len copy&check
+    //Header, Channel, Len copy&check
             ret = CopyFromEtherBuffer(sock, &ui_msg_rx.recv.head, UI_HEADER_SIZE);
             if (ret != op_error_none) return ret;
             if (ui_msg_rx.recv.head != head_data &&
-                    ui_msg_rx.recv.head != head_jump &&
-                    ui_msg_rx.recv.head != head_cmd &&
-                    ui_msg_rx.recv.head != head_start &&
-                    ui_msg_rx.recv.head != head_pause) return op_error_header;
+                ui_msg_rx.recv.head != head_jump &&
+                ui_msg_rx.recv.head != head_cmd &&
+                ui_msg_rx.recv.head != head_start &&
+                ui_msg_rx.recv.head != head_pause) return op_error_header;
         }
 
-        //Remain data copy&check
+    //Remain data copy&check
         for (i = 0; app_ui_cmd_table[i].process != NULL; i++) {
             if (app_ui_cmd_table[i].head == ui_msg_rx.recv.head) {
                 ret = app_ui_cmd_table[i].process(sock);
@@ -214,11 +210,11 @@ static AppCommUIOpErrList OpParser(uint16_t sock)
 
     //step loading exception & complete check
     if(ui_msg_rx.recv.remain_step_cnt != 0) {
-        if(ui_msg_rx.recv.remain_step_cnt_old != ui_msg_rx.recv.remain_step_cnt) {
+        if (ui_msg_rx.recv.remain_step_cnt_old != ui_msg_rx.recv.remain_step_cnt) {
             ui_msg_rx.recv.remain_step_cnt_old = ui_msg_rx.recv.remain_step_cnt;
             ui_msg_rx.step_load_time_out = 0;
         } else {
-            if(ui_msg_rx.step_load_time_out > 2000) {
+            if (ui_msg_rx.step_load_time_out > 2000) {
                 ui_msg_rx.recv.act_step_cnt = 0;
                 ui_msg_rx.recv.remain_step_cnt = 0;
                 ui_msg_rx.recv.remain_step_cnt_old = 0;
@@ -226,7 +222,6 @@ static AppCommUIOpErrList OpParser(uint16_t sock)
             }
         }
     }
-
     return ret;
 }
 
@@ -236,7 +231,7 @@ static AppCommUIOpErrList cb_Data(uint8_t sock)
     StepUnit step_temp;
     uint16_t i;
 
-    if(ui_msg_rx.recv.remain_step_cnt == 0) {
+    if (ui_msg_rx.recv.remain_step_cnt == 0) {
         ui_msg_rx.recv.act_step_cnt = 0;
         ui_msg_rx.recv.remain_step_cnt = ui_msg_rx.recv.len;
         ui_msg_rx.recv.remain_step_cnt_old = 0;
@@ -248,7 +243,7 @@ static AppCommUIOpErrList cb_Data(uint8_t sock)
     if (ret != op_error_none) return ret;
 
     for (i = 0; i < 4; i++) {
-        if((ui_msg_rx.recv.channel >> i) & 0x01) {
+        if ((ui_msg_rx.recv.channel >> i) & 0x01) {
             memcpy_fast_far(&gp_sdram[i]->total_step[ui_msg_rx.recv.act_step_cnt], &step_temp, sizeof(StepUnit));
         }
     }
@@ -256,7 +251,7 @@ static AppCommUIOpErrList cb_Data(uint8_t sock)
     ui_msg_rx.recv.act_step_cnt++;
     ui_msg_rx.recv.remain_step_cnt = ui_msg_rx.recv.len - ui_msg_rx.recv.act_step_cnt;
 
-    if(ui_msg_rx.recv.act_step_cnt == ui_msg_rx.recv.len) {
+    if (ui_msg_rx.recv.act_step_cnt == ui_msg_rx.recv.len) {
         ui_msg_rx.recv.step_loaded = TRUE;
     }
 
@@ -295,7 +290,6 @@ static AppCommUIOpErrList cb_Command(uint8_t sock)
             ret = CopyFromEtherBuffer(sock, (uint8_t*) &ui_msg_rx.recv.command[i], UI_CMD_SIZE);
             if (ret != op_error_none) return ret;
             ui_msg_rx.recv.command[i].cnt++;
-            //    printf("%s-%s-%d\r\n", __FILE__, __FUNCTION__, __LINE__);
         }
     }
     printf("%s-%s-%d\r\n", __FILE__, __FUNCTION__, __LINE__);
@@ -304,7 +298,7 @@ static AppCommUIOpErrList cb_Command(uint8_t sock)
 
 static AppCommUIOpErrList cb_Pause(uint8_t sock)
 {
-    uint16_t i,j;
+    uint16_t i;
     AppCommUIOpErrList ret = op_error_none;
     uint16_t cal_size = ui_msg_rx.recv.len - (UI_PAUSE_SIZE * 2);
 
@@ -322,7 +316,6 @@ static AppCommUIOpErrList cb_Pause(uint8_t sock)
             printf("channel-0x%2x\r\n", ui_msg_rx.recv.channel);
             printf("data[%d]-0x%02x\r\n", i, ui_msg_rx.recv.pause[i].cmd);
 #endif
-            //            printf("%s-%s-%d\r\n", __FILE__, __FUNCTION__, __LINE__);
         }
     }
     printf("%s-%s-%d\r\n", __FILE__, __FUNCTION__, __LINE__);
@@ -346,8 +339,6 @@ static AppCommUIOpErrList cb_Start(uint8_t sock)
             ui_msg_rx.recv.start[i].cnt++;
         }
     }
-
-
     return ret;
 }
 
@@ -355,54 +346,55 @@ static AppCommUIOpErrList OpSender(uint16_t sock, uint16_t channel)
 {
     AppCommUIOpErrList ret = op_error_none;
 
-    if(ui_msg_tx[channel].send.data.cnt != can_msg[channel].rx.op_report_cnt) {
+    if (ui_msg_tx[channel].send.data.cnt != can_msg[channel].rx.op_report_cnt) {
         ui_msg_tx[channel].send.data.cnt = can_msg[channel].rx.op_report_cnt;
 
         gp_sdram[channel]->head = head_data;
         gp_sdram[channel]->len = (UI_HEADER_SIZE + sizeof(LogUnit)) * 2;
-        switch(channel)
+
+        switch (channel)
         {
-        case 0:
-            gp_sdram[channel]->channel = channel_01;
-            break;
-        case 1:
-            gp_sdram[channel]->channel = channel_02;
-            break;
-        case 2:
-            gp_sdram[channel]->channel = channel_03;
-            break;
-        case 3:
-            gp_sdram[channel]->channel = channel_04;
-            break;
-        default :
-            break;
+            case 0:
+                gp_sdram[channel]->channel = channel_01;
+                break;
+            case 1:
+                gp_sdram[channel]->channel = channel_02;
+                break;
+            case 2:
+                gp_sdram[channel]->channel = channel_03;
+                break;
+            case 3:
+                gp_sdram[channel]->channel = channel_04;
+                break;
+            default:
+                break;
         }
 
         ret = CopyToEtherBuffer(sock, (uint8_t*) &gp_sdram[channel]->head, UI_HEADER_SIZE + sizeof(LogUnit));
         if (ret != op_error_none) return ret;
     }
 
-    if(ui_msg_tx[channel].send.alarm.cnt != can_msg[channel].rx.alarm_report_cnt) {
-
+    if (ui_msg_tx[channel].send.alarm.cnt != can_msg[channel].rx.alarm_report_cnt) {
         ui_msg_tx[channel].send.alarm.cnt = can_msg[channel].rx.alarm_report_cnt;
         ui_msg_tx[channel].send.alarm.head = head_alarm;
         ui_msg_tx[channel].send.alarm.len = (sizeof(ui_msg_tx[channel].send.alarm) - 1) * 2;
-        switch(channel)
+
+        switch (channel)
         {
-        case 0:
-            ui_msg_tx[channel].send.alarm.channel = channel_01;
-            break;
-        case 1:
-            ui_msg_tx[channel].send.alarm.channel = channel_02;
-            break;
-        case 2:
-            ui_msg_tx[channel].send.alarm.channel = channel_03;
-            break;
-        case 3:
-            ui_msg_tx[channel].send.alarm.channel = channel_04;
-            break;
-        default :
-            break;
+            case 0:
+                ui_msg_tx[channel].send.alarm.channel = channel_01;
+                break;
+            case 1:
+                ui_msg_tx[channel].send.alarm.channel = channel_02;
+                break;
+            case 2:
+                ui_msg_tx[channel].send.alarm.channel = channel_03;
+                break;
+            case 3:
+                ui_msg_tx[channel].send.alarm.channel = channel_04;
+                break;
+            default:
+                break;
         }
         ui_msg_tx[channel].send.alarm.step_idx = can_msg[channel].recipe.step_idx;
 
@@ -410,36 +402,31 @@ static AppCommUIOpErrList OpSender(uint16_t sock, uint16_t channel)
         ui_msg_tx[channel].send.alarm.data[1] = can_msg[channel].rx.alarm.dc.all;
         ui_msg_tx[channel].send.alarm.data[2] = can_msg[channel].rx.alarm.bat.all;
         ui_msg_tx[channel].send.alarm.data[3] = can_msg[channel].rx.alarm.fault.all;
-        //        if(can_msg[channel].op.power_error != 0){
+
         ret = CopyToEtherBuffer(sock, (uint8_t*) &ui_msg_tx[channel].send.alarm, sizeof(ui_msg_tx[channel].send.alarm) - 1);
         if (ret != op_error_none) return ret;
-        //        }
     }
 
-    if(ui_msg_tx[channel].send.end.cnt != can_msg[channel].rx.schedule_end_cnt) {
-        //can_msg[channel].rx.schedule_end_cnt = ui_msg_tx[channel].send.end.cnt;
+    if (ui_msg_tx[channel].send.end.cnt != can_msg[channel].rx.schedule_end_cnt) {
         ui_msg_tx[channel].send.end.cnt = can_msg[channel].rx.schedule_end_cnt;
         ui_msg_tx[channel].send.end.head = head_end;
         ui_msg_tx[channel].send.end.len = (sizeof(ui_msg_tx[channel].send.end) - 1) * 2;
-        ui_msg_tx[channel].send.end.channel = channel_01<<channel;
-        //        ui_msg_tx[channel].send.end.step_idx = 0;
-        ret = CopyToEtherBuffer(sock, (uint8_t*) &ui_msg_tx[channel].send.end, sizeof(ui_msg_tx[channel].send.end) - 1);
+        ui_msg_tx[channel].send.end.channel = channel_01 << channel;
 
+        ret = CopyToEtherBuffer(sock, (uint8_t*) &ui_msg_tx[channel].send.end, sizeof(ui_msg_tx[channel].send.end) - 1);
         if (ret != op_error_none) return ret;
     }
 
     //start
-    if(ui_msg_tx[channel].send.start.cnt != can_msg[channel].ui_evt.start.cnt) {
+    if (ui_msg_tx[channel].send.start.cnt != can_msg[channel].ui_evt.start.cnt) {
         ui_msg_tx[channel].send.start.cnt = can_msg[channel].ui_evt.start.cnt;
         ui_msg_tx[channel].send.start.head = head_start;
         ui_msg_tx[channel].send.start.len = (sizeof(ui_msg_tx[channel].send.start) - 1) * 2;
-        ui_msg_tx[channel].send.start.channel = channel_01<<channel;
-        //            g_debug_start=1;
-        ret = CopyToEtherBuffer(sock, (uint8_t*) &ui_msg_tx[channel].send.start, sizeof(ui_msg_tx[channel].send.start) - 1);
+        ui_msg_tx[channel].send.start.channel = channel_01 << channel;
 
+        ret = CopyToEtherBuffer(sock, (uint8_t*) &ui_msg_tx[channel].send.start, sizeof(ui_msg_tx[channel].send.start) - 1);
         if (ret != op_error_none) return ret;
     }
-
     return ret;
 }
 
@@ -448,22 +435,10 @@ static AppCommUIOpErrList CopyFromEtherBuffer(uint8_t sock, uint8_t *buf, uint16
     uint16_t size = getSn_RX_RSR(sock);
     int32_t ret;
 
-
-    //    printf("%s-%s-%d %d: input size - %u, recv size - %u\r\n", __FILE__, __FUNCTION__, __LINE__, sock, len, size);
-
     if (len) {
         if (size > 0) {
             ret = recv(sock, buf, len * 2);
-#if 0
-            int i;
-            printf("--------------------------------------------------\r\n");
-            for(i=0;i<len;i++)
-            {
-                printf("data[%d] : 0x%04x   len - %u, recv size - %u\r\n",i, buf[i], len, size);
-            }
-            `("--------------------------------------------------\r\n");
-#endif
-            //Size check
+    //Size check
             if (ret == len * 2) {
 //                printf("%s-%s-%d %d: Size Valid\r\n", __FILE__, __FUNCTION__, __LINE__, sock);
             } else if (ret < 0) {
@@ -478,26 +453,14 @@ static AppCommUIOpErrList CopyFromEtherBuffer(uint8_t sock, uint8_t *buf, uint16
             return op_error_len;
         }
     }
-
     return op_error_none;
 }
 
 static AppCommUIOpErrList CopyToEtherBuffer(uint8_t sock, uint8_t *buf, uint16_t len)
 {
     int32_t ret;
-    int i;
+
     ret = send(sock, buf, len * 2);
-    //    if(g_debug_start)
-    //    {
-    //        g_debug_start=0;
-    //        printf("------start----------\r\n");
-    //        for(i=0; i<len; i++)
-    //        {
-    //            printf("start data[%d]==0x%04x\r\n", i, buf[i]);
-    //        }
-    //        printf("------start----------\r\n");
-    //    }
-    //printf("%s-%s-%d %d: input size - %u, send size - %lu\r\n", __FILE__, __FUNCTION__, __LINE__, sock, len, ret);
 
     if (ret == len * 2) {
         //printf("%s-%s-%d %d: Size Valid\r\n", __FILE__, __FUNCTION__, __LINE__, sock);
@@ -508,7 +471,6 @@ static AppCommUIOpErrList CopyToEtherBuffer(uint8_t sock, uint8_t *buf, uint16_t
         printf("%s-%s-%d %d: Size Invalid\r\n", __FILE__, __FUNCTION__, __LINE__, sock);
         return op_error_len;
     }
-
     return op_error_none;
 }
 

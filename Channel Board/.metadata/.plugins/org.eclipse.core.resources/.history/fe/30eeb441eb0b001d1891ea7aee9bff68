@@ -1,0 +1,12 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CMD_SRCS += \
+../dsp/cmd/2837xD_FLASH_lnk_cpu2.cmd \
+../dsp/cmd/F2837xD_Headers_nonBIOS_cpu2.cmd 
+
+

@@ -1,0 +1,32 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../phoenixon/dsp/flash/Fapi_UserDefinedFunctions.c \
+../phoenixon/dsp/flash/flash_programming.c 
+
+C_DEPS += \
+./phoenixon/dsp/flash/Fapi_UserDefinedFunctions.d \
+./phoenixon/dsp/flash/flash_programming.d 
+
+OBJS += \
+./phoenixon/dsp/flash/Fapi_UserDefinedFunctions.obj \
+./phoenixon/dsp/flash/flash_programming.obj 
+
+OBJS__QUOTED += \
+"phoenixon\dsp\flash\Fapi_UserDefinedFunctions.obj" \
+"phoenixon\dsp\flash\flash_programming.obj" 
+
+C_DEPS__QUOTED += \
+"phoenixon\dsp\flash\Fapi_UserDefinedFunctions.d" \
+"phoenixon\dsp\flash\flash_programming.d" 
+
+C_SRCS__QUOTED += \
+"../phoenixon/dsp/flash/Fapi_UserDefinedFunctions.c" \
+"../phoenixon/dsp/flash/flash_programming.c" 
+
+

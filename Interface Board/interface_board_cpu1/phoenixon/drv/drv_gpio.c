@@ -43,9 +43,7 @@ Uint16 drv_initChannelNumber(void)
     channel_number|=GPIO_ReadPin(16);
     channel_number|=(GPIO_ReadPin(17)<<1);
 
-
     return channel_number;
-
 }
 
 

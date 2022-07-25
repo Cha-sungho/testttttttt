@@ -9,7 +9,8 @@
 #define PHOENIXON_DRV_DRV_CAN_H_
 
 #include "driverlib.h"
-#define OBJ_MAX_1CH 5
+
+#define OBJ_MAX_1CH     5
 
 typedef struct
 {

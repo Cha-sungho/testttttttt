@@ -1,0 +1,32 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../phoenixon/library/ioLibrary/Ethernet/socket.c \
+../phoenixon/library/ioLibrary/Ethernet/wizchip_conf.c 
+
+C_DEPS += \
+./phoenixon/library/ioLibrary/Ethernet/socket.d \
+./phoenixon/library/ioLibrary/Ethernet/wizchip_conf.d 
+
+OBJS += \
+./phoenixon/library/ioLibrary/Ethernet/socket.obj \
+./phoenixon/library/ioLibrary/Ethernet/wizchip_conf.obj 
+
+OBJS__QUOTED += \
+"phoenixon\library\ioLibrary\Ethernet\socket.obj" \
+"phoenixon\library\ioLibrary\Ethernet\wizchip_conf.obj" 
+
+C_DEPS__QUOTED += \
+"phoenixon\library\ioLibrary\Ethernet\socket.d" \
+"phoenixon\library\ioLibrary\Ethernet\wizchip_conf.d" 
+
+C_SRCS__QUOTED += \
+"../phoenixon/library/ioLibrary/Ethernet/socket.c" \
+"../phoenixon/library/ioLibrary/Ethernet/wizchip_conf.c" 
+
+

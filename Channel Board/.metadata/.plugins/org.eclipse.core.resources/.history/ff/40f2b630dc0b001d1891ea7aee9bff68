@@ -1,0 +1,87 @@
+/*
+ * app_safety.h
+ *
+ *  Created on: 2021. 12. 5.
+ *      Author: JOO
+ */
+
+#ifndef PHOENIXON_APP_SAFETY_APP_SAFETY_H_
+#define PHOENIXON_APP_SAFETY_APP_SAFETY_H_
+
+#include "app_op.h"
+
+extern uint16_t fault;
+
+#define SetBit(val, bit)            (val |= BIT_MASK(bit))
+#define ERROR_CHECK_TIME_MS(x)      (Uint32)(x / DSP_TIMER0_TIME * 1000)  // x ms
+
+#define BAT_REVERSE_INDEX 1
+
+
+//////   Warning Alarm        ///////////////////////
+#define BATTERY_REVERSED                                0
+#define BAD_BATTERY_CONTACT                             1
+#define SET_OVER_THE_MAXIMUM_TEST_CURRENT               2
+#define SET_OVER_THE_MAXIMUM_TEST_VOLTAGE               3
+#define SET_BELOW_THE_MINIMUM_TEST_VOLTAGE              4
+#define CHARGE_SETTING_VOLTAGE_ERROR                    5
+#define DISCHARGE_SETTING_VOLTAGE_ERROR                 6
+
+//////   DC Alarm        /////////////////////////////
+#define PRIMARY_SIDE_INPUT_PRECHARGE_ON_FAILURE         0
+#define PRIMARY_SIDE_INPUT_OFF_FAILURE                  1
+#define PRIMARY_SIDE_INPUT_FRONT_OVERVOLTAGE            2
+#define PRIMARY_SIDE_INPUT_FRONT_UNDERVOLTAGE           3
+#define PRIMARY_SIDE_INPUT_REAR_OVERVOLTAGE             4
+#define PRIMARY_SIDE_INPUT_REAR_UNDERVOLTAGE            5
+#define SECONDARY_SIDE_INPUT_OVERVOLTAGE                6
+#define SECONDARY_SIDE_INPUT_UNDERVOLTAGE               7
+#define SECONDARY_SIDE_OUTPUT_OVERVOLTAGE               8
+#define BATTERY_OUTPUT_PRE_CHARGE_ON_FAILURE            9
+#define OUTPUT_LINE_FAULT                               10
+
+//////   Battery Alarm        ///////////////////////
+#define BATTERY_OVER_TEMPRATURE                         0
+#define BATTERY_UNDER_TEMPRATURE                        1
+#define BATTERY_OVER_VOLTAGE                            2
+#define BATTERY_UNDER_VOLTAGE                           3
+#define BATTERY_OVER_CURRENT                            4
+#define BATTERY_CURRENT_UNBALANCE                       5
+
+//////    Fault Alarm       //////////////////////////
+#define EMERGENCY_SWITCH_OPERATION                      0
+#define INTERNAL_FAN_STOP                               1
+#define INTERNAL_POWER_SUPPLY_15VA_FAULT                2
+#define INTERNAL_POWER_SUPPLY_5VA_FAULT                 3
+#define INTERNAL_POWER_SUPPLY_12VD_FAULT                4
+#define PRIMARY_SIDE_HEATSINK_OVER_TEMPERATURE          5
+#define PRIMARY_SIDE_BOARD_OVER_TEMPERATURE             6
+#define SECONDARY_SIDE_BOARD_OVER_TEMPERATURE           7
+#define SECONDARY_SIDE_TOP_HEATSINK_OVER_TEMPERATURE    8
+#define SECONDARY_SIDE_BOT_HEATSINK_OVER_TEMPERATURE    9
+#define DSP_OVER_TEMPERATURE                            10
+
+#define SET     1
+#define CLEAR   0
+
+
+void app_InputPrechargeOnErrorCheck(void);
+void app_InputOffErrorCheck(void);
+void app_BatteryOutputPrechargeErrorCheck(void);
+void app_BoardPowerErrorCheck(void);
+void app_EmoSwitchCheck(void);
+void app_FanStopCheck(void);
+void app_BatteryReverseCheck(AppCommCanOpHandle* op);
+void app_InnerTempCheck(void);
+void app_PrimaryFrontPowerCheck(AppCommCanOpHandle* op);
+void app_PrimaryRearPowerCheck(AppCommCanOpHandle* op);
+void app_SecondaryPowerCheck(AppCommCanOpHandle* op);
+void app_BatteryErrorCheck(AppCommCanOpHandle* op);
+void app_ScheduleFaultCheck(void);
+
+
+void app_RunCheckSafety(Uint16 channel);
+void app_ResetSafetyVal(void);
+Uint16 app_KeepAliveCheck(Uint16* cnt, Uint16* old_cnt, BOOL* flag);
+
+#endif /* PHOENIXON_APP_SAFETY_APP_SAFETY_H_ */

@@ -7,6 +7,7 @@
 
 #ifndef PHOENIXON_APP_COMM_EQUIP_CAN_APP_CAN_OP_H_
 #define PHOENIXON_APP_COMM_EQUIP_CAN_APP_CAN_OP_H_
+
 #define REST_BY_STEP    1
 
 typedef enum
@@ -30,22 +31,22 @@ typedef enum
 
 typedef struct
 {
-    BOOL connect :1;      //bit 0
-    BOOL input_on :1;     //bit 1
-    BOOL sensing :1;      //bit 2
-    BOOL output_on :1;    //bit 3
-    BOOL reserved4 :1;    //bit 4
-    BOOL reserved5 :1;    //bit 5
-    BOOL reserved6 :1;    //bit 6
-    BOOL reserved7 :1;    //bit 7
-    BOOL reserved8 :1;    //bit 8
-    BOOL reserved9 :1;    //bit 9
-    BOOL reserved10 :1;   //bit 10
-    BOOL reserved11 :1;   //bit 11
-    BOOL reserved12 :1;   //bit 12
-    BOOL reserved13 :1;   //bit 13
-    BOOL reserved14 :1;   //bit 14
-    BOOL reserved15 :1;   //bit 15
+    BOOL connect            :1;      //bit 0
+    BOOL input_on           :1;     //bit 1
+    BOOL sensing            :1;      //bit 2
+    BOOL output_on          :1;    //bit 3
+    BOOL reserved4          :1;    //bit 4
+    BOOL reserved5          :1;    //bit 5
+    BOOL reserved6          :1;    //bit 6
+    BOOL reserved7          :1;    //bit 7
+    BOOL reserved8          :1;    //bit 8
+    BOOL reserved9          :1;    //bit 9
+    BOOL reserved10         :1;   //bit 10
+    BOOL reserved11         :1;   //bit 11
+    BOOL reserved12         :1;   //bit 12
+    BOOL reserved13         :1;   //bit 13
+    BOOL reserved14         :1;   //bit 14
+    BOOL reserved15         :1;   //bit 15
 } AppCommCanPowerState;
 
 typedef struct
@@ -91,11 +92,11 @@ typedef struct
 typedef struct
 {
     BOOL Battery_Over_temprature      :1;   //Bit00
-    BOOL Battery_Under_temprature     :1;   //Bit01   1
+    BOOL Battery_Under_temprature     :1;   //Bit01
     BOOL Battery_Over_voltage         :1;   //Bit02
     BOOL Battery_Under_voltage        :1;   //Bit03
-    BOOL Battery_Over_current         :1;   //Bit04   1
-    BOOL Battery_current_unbalance    :1;   //Bit05   1
+    BOOL Battery_Over_current         :1;   //Bit04
+    BOOL Battery_current_unbalance    :1;   //Bit05
     BOOL reserved6                    :1;   //Bit06
     BOOL reserved7                    :1;   //Bit07
     BOOL reserved8                    :1;   //Bit08
@@ -138,7 +139,6 @@ typedef struct
 
     struct
     {
-        //        BOOL receipe_run;
         AppCommCanOpStateList state;
         Uint64 timer;
         BOOL comm_error;
@@ -208,18 +208,21 @@ typedef struct
             BOOL flag;
             BOOL ignore_flag;
         } start;
+
         struct
         {
             uint16_t step_idx;
             uint16_t cnt;
             BOOL flag;
         } jump;
+
         struct
         {
             CommOpCCmd cmd;
             uint16_t cnt;
             BOOL flag;
         } command;
+
         struct
         {
             CommOpPCmd cmd;
@@ -246,7 +249,7 @@ typedef struct
         uint32_t thermal;
         uint16_t alarm_report_cnt;
         uint16_t thermal_report_cnt;
-        //        Uint16 alarm[4];
+
         struct
         {
             union
@@ -270,8 +273,8 @@ typedef struct
                 FaultAlarmList bit;
             }fault;
             BOOL flag;
-//            Uint16 clear_cnt;
         }alarm;
+
         Uint64 time_out;
         Uint64 time;
         uint16_t schedule_end_cnt;
@@ -283,7 +286,6 @@ extern Uint32 timer_count;
 extern Uint32 timer_count_2;
 extern Uint32 timer_count_3;
 extern Uint32 timer_count_4;
-
 
 Uint16 app_CommCanOpRun(Uint16 channel);
 Uint16 app_CommCanOpInit(Uint16 channel, BOOL use_for_alarm);

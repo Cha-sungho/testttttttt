@@ -71,7 +71,7 @@ typedef enum
 } tState;
 volatile tState g_eState;
 
-tUSBMode g_eCurrentUSBMode; // The current USB operating mode - Host, Device or unknown.
+tUSBMode g_eCurrentUSBMode;  // The current USB operating mode - Host, Device or unknown.
 
 void ModeCallback(uint32_t ui32Index, tUSBMode eMode);
 void MSCCallback(tUSBHMSCInstance *psMSCInstance, uint32_t ui32Event, void *pvEventData);
@@ -79,7 +79,7 @@ void USBHCDEvents(void *pvData);
 
 void drv_InitUsb(void)
 {
-    SysCtl_setAuxClock(DEVICE_AUXSETCLOCK_CFG_USB); // Set the clocking to run from the PLL at 60MHz
+    SysCtl_setAuxClock(DEVICE_AUXSETCLOCK_CFG_USB);  // Set the clocking to run from the PLL at 60MHz
     // Initially wait for device connection.
     g_eState = STATE_NO_DEVICE;
 
@@ -88,11 +88,12 @@ void drv_InitUsb(void)
     USBStackModeSet(0, eUSBModeForceHost, ModeCallback);    // Initialize the USB stack mode and pass in a mode callback.
     USBHCDRegisterDrivers(0, g_ppHostClassDrivers, NUM_CLASS_DRIVERS);      // Register the host class drivers.
     g_psMSCInstance = USBHMSCDriveOpen(0, (tUSBHMSCCallback) MSCCallback);  // Open an instance of the mass storage class driver.
-    USBHCDPowerConfigInit(0, USBHCD_VBUS_AUTO_HIGH | USBHCD_VBUS_FILTER);   // Initialize the power configuration. This sets the power enable signal to be active high and does not enable the power fault.
-    USBHCDInit(0, g_pHCDPool, HCD_MEMORY_SIZE);                             // Initialize the USB controller for OTG operation with a 2ms polling rate.
+    USBHCDPowerConfigInit(0, USBHCD_VBUS_AUTO_HIGH | USBHCD_VBUS_FILTER);  // Initialize the power configuration. This sets the power enable signal to be active high and does not enable the power fault.
+    USBHCDInit(0, g_pHCDPool, HCD_MEMORY_SIZE);                            // Initialize the USB controller for OTG operation with a 2ms polling rate.
 
     f_mount(0, &g_sFatFs);  // Initialize the file system.
 }
+
 #if 0
 FRESULT drv_f_write(uint16_t *f_buf, uint16_t f_size)
 {
@@ -115,6 +116,7 @@ FRESULT drv_f_write(uint16_t *f_buf, uint16_t f_size)
     return f_ret;
 }
 #endif
+
 void drv_InitFatfs(void)
 {
     uint16_t i, j;
@@ -147,7 +149,7 @@ void drv_InitFatfs(void)
             }
         }
         USBHCDMain();   // Run the main routine of the Host controller driver.
-        if(g_eState == STATE_DEVICE_READY) break;
+        if (g_eState == STATE_DEVICE_READY) break;
     }
 #if 1
 

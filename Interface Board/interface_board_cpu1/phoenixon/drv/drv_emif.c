@@ -91,6 +91,7 @@ void drv_InitEmif(void)
     EMIF_setAsyncTimingParams(EMIF1_BASE, EMIF_ASYNC_CS2_OFFSET, &tparam);
 
 }
+
 void setupEMIF1PinmuxAsync16Bit()
 {
     Uint16 i;
@@ -148,7 +149,7 @@ void setupEMIF1PinmuxSync16Bit()
     //
     for (i = 53; i <= 85; i++) {
         if (i != 84) {
-            GPIO_SetupPinOptions(i, 0, 0x31);
+            GPIO_SetupPinOptions(i, 0, 0x31);   // GPIO_ASYNC||GPIO_PULLUP
         }
     }
 }
@@ -161,7 +162,6 @@ Uint16 DSP_EmifRead(Uint32 ul_Address, Uint16 *ui_Data)
     }
 
     *ui_Data = *((Uint32*) (ul_Address));
-
     return (SUCCESS);  //SUCCESS Or FAIL
 }
 

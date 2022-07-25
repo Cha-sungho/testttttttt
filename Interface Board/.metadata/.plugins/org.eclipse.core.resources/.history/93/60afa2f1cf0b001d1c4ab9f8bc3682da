@@ -1,0 +1,26 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../phoenixon/library/ioLibrary/Internet/DHCP/dhcp.c 
+
+C_DEPS += \
+./phoenixon/library/ioLibrary/Internet/DHCP/dhcp.d 
+
+OBJS += \
+./phoenixon/library/ioLibrary/Internet/DHCP/dhcp.obj 
+
+OBJS__QUOTED += \
+"phoenixon\library\ioLibrary\Internet\DHCP\dhcp.obj" 
+
+C_DEPS__QUOTED += \
+"phoenixon\library\ioLibrary\Internet\DHCP\dhcp.d" 
+
+C_SRCS__QUOTED += \
+"../phoenixon/library/ioLibrary/Internet/DHCP/dhcp.c" 
+
+

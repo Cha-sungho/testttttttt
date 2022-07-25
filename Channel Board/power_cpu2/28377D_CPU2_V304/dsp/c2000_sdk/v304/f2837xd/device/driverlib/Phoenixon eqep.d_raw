@@ -1,0 +1,17 @@
+dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.obj: C:/Users/Phoenixon\\ HW/Desktop/Control_merge_220302/power_cpu1/dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.c
+dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.obj: C:\Users\Phoenixon\\ HW\Desktop\Control_merge_220302\power_cpu1\dsp\c2000_sdk\v304\f2837xd\device\driverlib\eqep.h
+dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include/stdbool.h
+dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include/_ti_config.h
+dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include/linkage.h
+dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include/stdint.h
+dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include/_stdint40.h
+dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include/sys/stdint.h
+dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include/sys/cdefs.h
+dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include/sys/_types.h
+dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include/machine/_types.h
+dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include/machine/_stdint.h
+dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include/sys/_stdint.h
+dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.obj: C:\Users\Phoenixon\\ HW\Desktop\Control_merge_220302\power_cpu1\dsp\c2000_sdk\v304\f2837xd\device\driverlib\inc/hw_memmap.h
+dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.obj: C:\Users\Phoenixon\\ HW\Desktop\Control_merge_220302\power_cpu1\dsp\c2000_sdk\v304\f2837xd\device\driverlib\inc/hw_eqep.h
+dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.obj: C:\Users\Phoenixon\\ HW\Desktop\Control_merge_220302\power_cpu1\dsp\c2000_sdk\v304\f2837xd\device\driverlib\inc/hw_types.h
+dsp/c2000_sdk/v304/f2837xd/device/driverlib/eqep.obj: C:\Users\Phoenixon\\ HW\Desktop\Control_merge_220302\power_cpu1\dsp\c2000_sdk\v304\f2837xd\device\driverlib\debug.h

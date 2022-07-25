@@ -17,17 +17,14 @@
 #include "wizchip_conf.h"
 
 #define IP_MAC 92
-//#define RACK_NUMBER 3
 
 uint8_t memsize[2][8] = { { 48, 4, 4, 8, 0, 0, 0, 0 }, { 48, 4, 4, 8, 0, 0, 0, 0 } };
 wiz_NetInfo set_net_info;
 wiz_NetInfo cmp_net_info;
 
-
 void drv_InitW5300Gpio(void);
 void drv_ResetW5300(void);
 void drv_PrintNetInfo(void);
-
 void drv_InitW5300Gpio(void)
 {
     GPIO_setPinConfig(GPIO_14_GPIO14);
@@ -44,10 +41,10 @@ void drv_ResetW5300(void)
 
 void drv_InitNet(Uint16 IF_board_channel, Uint16 rack_number)
 {
-    uint8 ip[4] = { 192, 168, rack_number, 2+(uint8)IF_board_channel }; // 192.168.2.2~4
+    uint8 ip[4] = { 192, 168, rack_number, 2 + (uint8) IF_board_channel };  // 192.168.2.2~4
     uint8 gw[4] = { 192, 168, rack_number, 1 };
     uint8 sn[4] = { 255, 255, 255, 0 };
-    uint8 mac[6] = { 0x00, 0x08, 0xDC, 0x00, rack_number, 2+(uint8)IF_board_channel };
+    uint8 mac[6] = { 0x00, 0x08, 0xDC, 0x00, rack_number, 2 + (uint8) IF_board_channel };
     uint8 dhcp[1] = { 1 };
 
     drv_InitW5300Gpio();

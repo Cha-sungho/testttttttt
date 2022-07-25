@@ -1,0 +1,119 @@
+/*
+ * drv_emif.c
+ *
+ *  Created on: Nov 4, 2021
+ *      Author: JOO
+ */
+
+#include "f28x_project.h"
+#include "driverlib.h"
+#include "device.h"
+
+#include "drv_emif.h"
+#include "drv_gpio.h"
+
+#ifdef CPU2
+#ifdef _FLASH
+#pragma CODE_SECTION(drv_WriteEMIF, ".TI.ramfunc");
+#pragma CODE_SECTION(drv_ReadEMIF, ".TI.ramfunc");
+#pragma CODE_SECTION(drv_Read16MULEMIF, ".TI.ramfunc");
+#endif
+#endif
+
+static void drv_ConfigEMIFGPIO(void);
+
+static void drv_ConfigEMIFGPIO(void)
+{
+    EALLOW;
+
+    drv_ConfigGPIO(0xFFFF, 31, 0xFFFF, GPIO_31_EM1WEN, 0xFFFF, 0xFFFF, 0xFFFF);  // NXWE
+    drv_ConfigGPIO(0xFFFF, 37, 0xFFFF, GPIO_37_EM1OEN, 0xFFFF, 0xFFFF, 0xFFFF);  // NXRD
+
+    // Selecting data lines.
+    drv_ConfigGPIO(0xFFFF, 69, 0xFFFF, GPIO_69_EM1D15, GPIO_PIN_TYPE_PULLUP, GPIO_QUAL_ASYNC, 0xFFFF);  // EM1D15
+    drv_ConfigGPIO(0xFFFF, 70, 0xFFFF, GPIO_70_EM1D14, GPIO_PIN_TYPE_PULLUP, GPIO_QUAL_ASYNC, 0xFFFF);  // EM1D14
+    drv_ConfigGPIO(0xFFFF, 71, 0xFFFF, GPIO_71_EM1D13, GPIO_PIN_TYPE_PULLUP, GPIO_QUAL_ASYNC, 0xFFFF);  // EM1D13
+    drv_ConfigGPIO(0xFFFF, 72, 0xFFFF, GPIO_72_EM1D12, GPIO_PIN_TYPE_PULLUP, GPIO_QUAL_ASYNC, 0xFFFF);  // EM1D12
+    drv_ConfigGPIO(0xFFFF, 73, 0xFFFF, GPIO_73_EM1D11, GPIO_PIN_TYPE_PULLUP, GPIO_QUAL_ASYNC, 0xFFFF);  // EM1D11
+    drv_ConfigGPIO(0xFFFF, 74, 0xFFFF, GPIO_74_EM1D10, GPIO_PIN_TYPE_PULLUP, GPIO_QUAL_ASYNC, 0xFFFF);  // EM1D10
+    drv_ConfigGPIO(0xFFFF, 75, 0xFFFF, GPIO_75_EM1D9, GPIO_PIN_TYPE_PULLUP, GPIO_QUAL_ASYNC, 0xFFFF);   // EM1D9
+    drv_ConfigGPIO(0xFFFF, 76, 0xFFFF, GPIO_76_EM1D8, GPIO_PIN_TYPE_PULLUP, GPIO_QUAL_ASYNC, 0xFFFF);   // EM1D8
+    drv_ConfigGPIO(0xFFFF, 77, 0xFFFF, GPIO_77_EM1D7, GPIO_PIN_TYPE_PULLUP, GPIO_QUAL_ASYNC, 0xFFFF);   // EM1D7
+    drv_ConfigGPIO(0xFFFF, 78, 0xFFFF, GPIO_78_EM1D6, GPIO_PIN_TYPE_PULLUP, GPIO_QUAL_ASYNC, 0xFFFF);   // EM1D6
+    drv_ConfigGPIO(0xFFFF, 79, 0xFFFF, GPIO_79_EM1D5, GPIO_PIN_TYPE_PULLUP, GPIO_QUAL_ASYNC, 0xFFFF);   // EM1D5
+    drv_ConfigGPIO(0xFFFF, 80, 0xFFFF, GPIO_80_EM1D4, GPIO_PIN_TYPE_PULLUP, GPIO_QUAL_ASYNC, 0xFFFF);   // EM1D4
+    drv_ConfigGPIO(0xFFFF, 81, 0xFFFF, GPIO_81_EM1D3, GPIO_PIN_TYPE_PULLUP, GPIO_QUAL_ASYNC, 0xFFFF);   // EM1D3
+    drv_ConfigGPIO(0xFFFF, 82, 0xFFFF, GPIO_82_EM1D2, GPIO_PIN_TYPE_PULLUP, GPIO_QUAL_ASYNC, 0xFFFF);   // EM1D2
+    drv_ConfigGPIO(0xFFFF, 83, 0xFFFF, GPIO_83_EM1D1, GPIO_PIN_TYPE_PULLUP, GPIO_QUAL_ASYNC, 0xFFFF);   // EM1D1
+    drv_ConfigGPIO(0xFFFF, 85, 0xFFFF, GPIO_85_EM1D0, GPIO_PIN_TYPE_PULLUP, GPIO_QUAL_ASYNC, 0xFFFF);   // EM1D0
+
+    EDIS;
+}
+
+void drv_InitEMIF(void)
+{
+    EMIF_AsyncTimingParams tparam;
+
+#ifdef CPU1
+    drv_ConfigEMIFGPIO();
+#endif
+
+#ifdef CPU2
+    EMIF_selectMaster(EMIF1CONFIG_BASE, EMIF_MASTER_CPU2_G);                                // Grab EMIF1 For CPU2.
+    SysCtl_setEMIF1ClockDivider(SYSCTL_EMIF1CLK_DIV_1);                                     // Configure to run EMIF1 on full Rate. (EMIF1CLK = PLLSYSCLK / 1)
+    EMIF_setAccessProtection(EMIF1CONFIG_BASE, 0x0);                                        // Disable Access Protection. (CPU_FETCH/CPU_WR/DMA_WR)
+    EMIF_commitAccessConfig(EMIF1CONFIG_BASE);                                              // Commit the configuration related to protection. Till this bit remains set, contents of EMIF1ACCPROT0 register can't be changed.
+    EMIF_lockAccessConfig(EMIF1CONFIG_BASE);                                                // Lock the configuration so that EMIF1COMMIT register can't be changed any more.
+    EMIF_setAsyncMode(EMIF1_BASE, EMIF_ASYNC_CS2_OFFSET, EMIF_ASYNC_NORMAL_MODE);           // Configures Normal Asynchronous Mode of Operation.
+    EMIF_disableAsyncExtendedWait(EMIF1_BASE, EMIF_ASYNC_CS2_OFFSET);                       // Disables Extended Wait Mode.
+    EMIF_setAsyncDataBusWidth(EMIF1_BASE, EMIF_ASYNC_CS2_OFFSET, EMIF_ASYNC_DATA_WIDTH_16); // Configure EMIF1 Data Bus Width.
+
+    // Configure the access timing for CS2 space.
+    tparam.rSetup   = 4;        //Max 16 //15
+    tparam.rStrobe  = 16;       //Max 64 //12
+    tparam.rHold    = 2;        //Max 8  //8
+    tparam.turnArnd = 4;        //Max 4
+    tparam.wSetup   = 15;       //Max 16
+    tparam.wStrobe  = 10;       //Max 64
+    tparam.wHold    = 4;        //Max 8
+
+    EMIF_setAsyncTimingParams(EMIF1_BASE, EMIF_ASYNC_CS2_OFFSET, &tparam);
+#endif
+}
+
+uint16_t drv_WriteEMIF(uint32_t addr, uint16_t data)
+{
+    if (addr < EMIF_CS2_BASE_ADDRESS || addr > EMIF_CS2_END_ADDRESS) {
+        return (FAIL);
+    }
+    (*(uint16_t*) (addr)) = data;
+
+    return (SUCCESS);
+}
+
+uint16_t drv_ReadEMIF(uint32_t addr, uint16_t *data)
+{
+    if (addr < EMIF_CS2_BASE_ADDRESS || addr > EMIF_CS2_END_ADDRESS) {
+        return (FAIL);
+    }
+    *data = *((uint32_t*) (addr));
+
+    return (SUCCESS);
+}
+
+uint16_t drv_Read16MULEMIF(uint32_t addr, uint16_t *data)
+{
+    if (addr < EMIF_CS2_BASE_ADDRESS || addr > EMIF_CS2_END_ADDRESS) {
+        return (FAIL);
+    }
+    data[0] = *((uint32_t*) (addr));
+    data[1] = *((uint32_t*) (addr));
+    data[2] = *((uint32_t*) (addr));
+    data[3] = *((uint32_t*) (addr));
+    data[4] = *((uint32_t*) (addr));
+    data[5] = *((uint32_t*) (addr));
+    data[6] = *((uint32_t*) (addr));
+    data[7] = *((uint32_t*) (addr));
+
+    return (SUCCESS);
+}

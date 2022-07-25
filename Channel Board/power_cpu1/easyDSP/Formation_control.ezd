@@ -1,0 +1,24 @@
+[Basic Page]
+m_strPrjFileName = D:\1.Phoenixon_Work\06.Ccs_Workspace\04.Fomation5V100A\4_Channel_card\Formation_Channel\power_cpu1\easyDSP\Formation_control.ezd
+m_strOutFileName = D:\1.Phoenixon_Work\06.Ccs_Workspace\04.Fomation5V100A\4_Channel_card\Formation_Channel\power_cpu1\28377D_CPU1_V400\power_cpu1.out
+m_strOut2FileName = 
+m_strOut3FileName = 
+m_strDSPType = TMS320F28377D CPU1
+m_strCommPort = SCI
+m_strDebuggingModel = dwarf
+[Parallel & RS232 Port]
+m_strProtocol = Fast
+[USB Port]
+m_uBPS = 115200
+m_uWaitMoreMicroTime = 1000
+m_uOscClkFreq = 30
+m_bBluetoothEnabled = 0
+[Miscellaneous]
+m_bVariableAutoSeek = 1
+m_bStopWhenSuccessiveFail = 0
+m_bDisplayPrintableChar = 0
+m_bUseHexFileMadeByIde = 0
+m_bUseOldMemoryWindow = 0
+m_strEditor = 
+[Project Information]
+m_uVersion = 1000

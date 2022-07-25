@@ -1,0 +1,88 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+ASM_SRCS += \
+../phoenixon/dsp/f2837xd/F2837xD_CodeStartBranch.asm \
+../phoenixon/dsp/f2837xd/F2837xD_usDelay.asm \
+../phoenixon/dsp/f2837xd/memcpy_fast_far.asm 
+
+C_SRCS += \
+../phoenixon/dsp/f2837xd/F2837xD_DefaultISR.c \
+../phoenixon/dsp/f2837xd/F2837xD_Emif.c \
+../phoenixon/dsp/f2837xd/F2837xD_GlobalVariableDefs.c \
+../phoenixon/dsp/f2837xd/F2837xD_Gpio.c \
+../phoenixon/dsp/f2837xd/F2837xD_PieCtrl.c \
+../phoenixon/dsp/f2837xd/F2837xD_PieVect.c \
+../phoenixon/dsp/f2837xd/F2837xD_SysCtrl.c 
+
+C_DEPS += \
+./phoenixon/dsp/f2837xd/F2837xD_DefaultISR.d \
+./phoenixon/dsp/f2837xd/F2837xD_Emif.d \
+./phoenixon/dsp/f2837xd/F2837xD_GlobalVariableDefs.d \
+./phoenixon/dsp/f2837xd/F2837xD_Gpio.d \
+./phoenixon/dsp/f2837xd/F2837xD_PieCtrl.d \
+./phoenixon/dsp/f2837xd/F2837xD_PieVect.d \
+./phoenixon/dsp/f2837xd/F2837xD_SysCtrl.d 
+
+OBJS += \
+./phoenixon/dsp/f2837xd/F2837xD_CodeStartBranch.obj \
+./phoenixon/dsp/f2837xd/F2837xD_DefaultISR.obj \
+./phoenixon/dsp/f2837xd/F2837xD_Emif.obj \
+./phoenixon/dsp/f2837xd/F2837xD_GlobalVariableDefs.obj \
+./phoenixon/dsp/f2837xd/F2837xD_Gpio.obj \
+./phoenixon/dsp/f2837xd/F2837xD_PieCtrl.obj \
+./phoenixon/dsp/f2837xd/F2837xD_PieVect.obj \
+./phoenixon/dsp/f2837xd/F2837xD_SysCtrl.obj \
+./phoenixon/dsp/f2837xd/F2837xD_usDelay.obj \
+./phoenixon/dsp/f2837xd/memcpy_fast_far.obj 
+
+ASM_DEPS += \
+./phoenixon/dsp/f2837xd/F2837xD_CodeStartBranch.d \
+./phoenixon/dsp/f2837xd/F2837xD_usDelay.d \
+./phoenixon/dsp/f2837xd/memcpy_fast_far.d 
+
+OBJS__QUOTED += \
+"phoenixon\dsp\f2837xd\F2837xD_CodeStartBranch.obj" \
+"phoenixon\dsp\f2837xd\F2837xD_DefaultISR.obj" \
+"phoenixon\dsp\f2837xd\F2837xD_Emif.obj" \
+"phoenixon\dsp\f2837xd\F2837xD_GlobalVariableDefs.obj" \
+"phoenixon\dsp\f2837xd\F2837xD_Gpio.obj" \
+"phoenixon\dsp\f2837xd\F2837xD_PieCtrl.obj" \
+"phoenixon\dsp\f2837xd\F2837xD_PieVect.obj" \
+"phoenixon\dsp\f2837xd\F2837xD_SysCtrl.obj" \
+"phoenixon\dsp\f2837xd\F2837xD_usDelay.obj" \
+"phoenixon\dsp\f2837xd\memcpy_fast_far.obj" 
+
+C_DEPS__QUOTED += \
+"phoenixon\dsp\f2837xd\F2837xD_DefaultISR.d" \
+"phoenixon\dsp\f2837xd\F2837xD_Emif.d" \
+"phoenixon\dsp\f2837xd\F2837xD_GlobalVariableDefs.d" \
+"phoenixon\dsp\f2837xd\F2837xD_Gpio.d" \
+"phoenixon\dsp\f2837xd\F2837xD_PieCtrl.d" \
+"phoenixon\dsp\f2837xd\F2837xD_PieVect.d" \
+"phoenixon\dsp\f2837xd\F2837xD_SysCtrl.d" 
+
+ASM_DEPS__QUOTED += \
+"phoenixon\dsp\f2837xd\F2837xD_CodeStartBranch.d" \
+"phoenixon\dsp\f2837xd\F2837xD_usDelay.d" \
+"phoenixon\dsp\f2837xd\memcpy_fast_far.d" 
+
+ASM_SRCS__QUOTED += \
+"../phoenixon/dsp/f2837xd/F2837xD_CodeStartBranch.asm" \
+"../phoenixon/dsp/f2837xd/F2837xD_usDelay.asm" \
+"../phoenixon/dsp/f2837xd/memcpy_fast_far.asm" 
+
+C_SRCS__QUOTED += \
+"../phoenixon/dsp/f2837xd/F2837xD_DefaultISR.c" \
+"../phoenixon/dsp/f2837xd/F2837xD_Emif.c" \
+"../phoenixon/dsp/f2837xd/F2837xD_GlobalVariableDefs.c" \
+"../phoenixon/dsp/f2837xd/F2837xD_Gpio.c" \
+"../phoenixon/dsp/f2837xd/F2837xD_PieCtrl.c" \
+"../phoenixon/dsp/f2837xd/F2837xD_PieVect.c" \
+"../phoenixon/dsp/f2837xd/F2837xD_SysCtrl.c" 
+
+

@@ -17,13 +17,13 @@
 typedef enum
 {
     head_init,
-    head_data     = 0x4044,    //ASCII   @D = 0x4044
-    head_jump     = 0x404A,    //Code    @J = 0x404A
-    head_cmd      = 0x4043,    //        @C = 0x4043
-    head_start    = 0x4053,    //        @S = 0x4053
-    head_end      = 0x4045,    //        @E = 0x4045
-    head_pause    = 0x4050,    //        @P = 0x4050
-    head_alarm    = 0x4041,    //        @A = 0x4041
+    head_data       = 0x4044,    //ASCII   @D = 0x4044
+    head_jump       = 0x404A,    //Code    @J = 0x404A
+    head_cmd        = 0x4043,    //        @C = 0x4043
+    head_start      = 0x4053,    //        @S = 0x4053
+    head_end        = 0x4045,    //        @E = 0x4045
+    head_pause      = 0x4050,    //        @P = 0x4050
+    head_alarm      = 0x4041,    //        @A = 0x4041
     head_none
 } CommOpHeadList;
 
@@ -38,26 +38,26 @@ typedef enum
 
 typedef enum
 {
-    d_req_cmd_none                = 0x0,
-    d_req_cmd_rest                = 0x81,
-    d_req_cmd_charge              = 0x82,
-    d_req_cmd_discharge           = 0x83,
-    d_req_cmd_contact_resistance_measure = 0x93    // CHA 22.05.16 
+    d_req_cmd_none                          = 0x0,
+    d_req_cmd_rest                          = 0x81,
+    d_req_cmd_charge                        = 0x82,
+    d_req_cmd_discharge                     = 0x83,
+    d_req_cmd_contact_resistance_measure    = 0x93    // CHA 22.05.16
 } CommOpDReqCmdList;
 
 typedef enum
 {
-    d_res_cmd_none                = 0x0,
-    d_res_cmd_rest                = 0x81,
-    d_res_cmd_charge              = 0x82,
-    d_res_cmd_discharge           = 0x83,
-    d_res_cmd_alarm_clear         = 0x84,
-    d_res_cmd_input_relay_off     = 0x85,
-    d_res_cmd_input_relay_on      = 0x86,
-    d_res_cmd_output_relay_off    = 0x87,
-    d_res_cmd_output_relay_on     = 0x88,
-    d_res_cmd_all_relay_off       = 0x89,
-    d_res_cmd_contact_resistance_measure = 0x93    // CHA 22.05.16
+    d_res_cmd_none                          = 0x0,
+    d_res_cmd_rest                          = 0x81,
+    d_res_cmd_charge                        = 0x82,
+    d_res_cmd_discharge                     = 0x83,
+    d_res_cmd_alarm_clear                   = 0x84,
+    d_res_cmd_input_relay_off               = 0x85,
+    d_res_cmd_input_relay_on                = 0x86,
+    d_res_cmd_output_relay_off              = 0x87,
+    d_res_cmd_output_relay_on               = 0x88,
+    d_res_cmd_all_relay_off                 = 0x89,
+    d_res_cmd_contact_resistance_measure    = 0x93    // CHA 22.05.16
 } CommOpDResCmdList;
 
 typedef enum
@@ -66,7 +66,7 @@ typedef enum
     d_step_mode_normal,
     d_step_mode_normal_pattern,
     d_step_mode_paralle,
-    d_step_mode_parallel_pattern,
+    d_step_mode_parallel_pattern
 } CommOpDStepMode;
 
 typedef enum
@@ -105,48 +105,33 @@ typedef enum
     d_sampling_1ms    = 1,
     d_sampling_10ms   = 2,
     d_sampling_100ms  = 3,
-    d_sampling_1000ms = 4,
+    d_sampling_1000ms = 4
 } CommOpDLogInterval;
-#if 0
+
 typedef enum
 {
-    d_res_end_cond_none             = 0x00,
-    d_res_end_cond_time             = 0x01,
-    d_res_end_cond_i                = 0x02,
-    d_res_end_cond_capa             = 0x03,
-    d_res_end_cond_watt             = 0x04,
-    d_res_end_cond_v                = 0x05,
-    d_res_end_step_move             = 0x06,
-    d_res_end_complete_immediately  = 0x07,
-    d_res_end_alarm                 = 0x08,
-    d_res_end_pause                 = 0x09,
-} CommOpDResEndCond;
-#endif
-typedef enum
-{
-    d_res_end_cond_none             = 0x00,
-    d_res_end_cond_time             = 0x01,
-    d_res_end_cond_i                = 0x02,
-    d_res_end_cond_capa             = 0x03,
-    d_res_end_cond_watt             = 0x04,
-    d_res_end_cond_v                = 0x05,
-    d_res_Cycle_Loop_Complete       = 6,
-    d_res_Cycle_Loop_Resume         = 7,
-    d_res_Cycle_Voltage_Cut         = 8,
-    d_res_Cycle_Time_Cut            = 9,
-    d_res_Cycle_Capacity_Cut        = 10,
-    d_res_Cycle_Watt_Cut            = 11,
-    d_res_Cycle_Low_Voltage_Cut     = 12,
-    d_res_Jump                      = 13,
-    d_res_Complete                  = 14,
-    d_res_Alarm                     = 15,
-    d_res_Pause                     = 16,
+    d_res_end_cond_none             = 0,       // 0  [ None ],
+    d_res_end_cond_time             = 1,       // 1  [ Time ],
+    d_res_end_cond_i                = 2,       // 2  [ Ampere ],
+    d_res_end_cond_capa             = 3,       // 3  [ Capacity ],
+    d_res_end_cond_watt             = 4,       // 4  [ Watt ],
+    d_res_end_cond_v                = 5,       // 5  [ Voltage ],
+    d_res_Cycle_Loop_Complete       = 6,       //
+    d_res_Cycle_Loop_Resume         = 7,       //
+    d_res_Cycle_Voltage_Cut         = 8,       // 8  [ Cycle Voltage ],
+    d_res_Cycle_Time_Cut            = 9,       // 9  [ Cycle Time ],
+    d_res_Cycle_Capacity_Cut        = 10,      // 10 [ Cycle Capacity ],
+    d_res_Cycle_Watt_Cut            = 11,      // 11 [ Cycle Watt ],
+    d_res_Cycle_Low_Voltage_Cut     = 12,      // 12 [ Cycle Low Voltage ]
+    d_res_Jump                      = 13,      // 13 [ Jump Echo ],
+    d_res_Complete                  = 14,      // 14 [ Force Complete Echo ],
+    d_res_Alarm                     = 15,      // 15 [ Alarm ],
+    d_res_Pause                     = 16,      // 16 [ Pause Echo ],
     d_res_Dwell_Single              = 17,
     d_res_Dwell_Multi               = 18,
     d_res_Rising_Chamber_Single     = 19,
     d_res_Rising_Chamber_Multi      = 20,
-    d_res_Step_Sync                 = 21,
-
+    d_res_Step_Sync                 = 21
 } CommOpDResEndCond;
 
 typedef enum
@@ -183,7 +168,7 @@ typedef struct
 
     CommOpDLogInterval sampling_time;
     CommOpDLogInterval send_time;
-#if 1
+
     Uint16 step_idx;
 
     Uint16 cycle_loop_cnt;
@@ -222,7 +207,6 @@ typedef struct
     Uint16 end_cond_watt_00;
 
     Uint16 end_cond_watt_move_idx;
-#endif
 } StepUnit;
 
 typedef struct

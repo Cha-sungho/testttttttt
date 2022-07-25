@@ -10,14 +10,12 @@
 #include "device.h"
 
 #pragma CODE_SECTION(drv_irq_Timer0, ".TI.ramfunc");
-//#pragma CODE_SECTION(DSP_Timer1_ISR, ".TI.ramfunc");
-//#pragma CODE_SECTION(DSP_Timer2_ISR, ".TI.ramfunc");
 
-Uint32 timer_count =0;
-Uint32 timer_count_2 =0;
-Uint32 timer_count_3 =0;
-Uint32 timer_count_4 =0;
-Uint16 LED_FLAG=0;
+Uint32 timer_count = 0;
+Uint32 timer_count_2 = 0;
+Uint32 timer_count_3 = 0;
+Uint32 timer_count_4 = 0;
+Uint16 LED_FLAG = 0;
 
 typedef struct
 {
@@ -91,7 +89,7 @@ void drv_ConfigTimer(Uint32 Timer, float Frequency, float Period)
 __interrupt void drv_irq_Timer0(void)
 {
     Uint16 i;
-    //GpioDataRegs.GPBTOGGLE.bit.GPIO35 = 1;
+
     for (i = 0; drv_timer_register[i].process != NULL; i++) {
         drv_timer_register[i].process();
     }
@@ -105,7 +103,6 @@ __interrupt void drv_irq_Timer0(void)
     {
         GpioDataRegs.GPBTOGGLE.bit.GPIO35 = 1;
     }
-
 }
 
 __interrupt void drv_irq_Timer1(void)

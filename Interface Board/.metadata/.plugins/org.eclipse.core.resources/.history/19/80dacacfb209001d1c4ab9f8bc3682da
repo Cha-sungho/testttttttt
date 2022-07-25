@@ -1,0 +1,26 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../phoenixon/library/ioLibrary/Ethernet/W5300/w5300.c 
+
+C_DEPS += \
+./phoenixon/library/ioLibrary/Ethernet/W5300/w5300.d 
+
+OBJS += \
+./phoenixon/library/ioLibrary/Ethernet/W5300/w5300.obj 
+
+OBJS__QUOTED += \
+"phoenixon\library\ioLibrary\Ethernet\W5300\w5300.obj" 
+
+C_DEPS__QUOTED += \
+"phoenixon\library\ioLibrary\Ethernet\W5300\w5300.d" 
+
+C_SRCS__QUOTED += \
+"../phoenixon/library/ioLibrary/Ethernet/W5300/w5300.c" 
+
+

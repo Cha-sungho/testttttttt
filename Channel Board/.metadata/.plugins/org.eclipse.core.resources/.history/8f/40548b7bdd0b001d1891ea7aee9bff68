@@ -1,0 +1,32 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+F:/[1]\ Cha\ backup/[21]\ Workspace_PhoenixonControls/Formation\ Channel/power_cpu1/phoenixon/app_formation/bsp/bsp_ad7606.c \
+F:/[1]\ Cha\ backup/[21]\ Workspace_PhoenixonControls/Formation\ Channel/power_cpu1/phoenixon/app_formation/bsp/bsp_io.c 
+
+C_DEPS += \
+./phoenixon/app_formation/bsp/bsp_ad7606.d \
+./phoenixon/app_formation/bsp/bsp_io.d 
+
+OBJS += \
+./phoenixon/app_formation/bsp/bsp_ad7606.obj \
+./phoenixon/app_formation/bsp/bsp_io.obj 
+
+OBJS__QUOTED += \
+"phoenixon\app_formation\bsp\bsp_ad7606.obj" \
+"phoenixon\app_formation\bsp\bsp_io.obj" 
+
+C_DEPS__QUOTED += \
+"phoenixon\app_formation\bsp\bsp_ad7606.d" \
+"phoenixon\app_formation\bsp\bsp_io.d" 
+
+C_SRCS__QUOTED += \
+"F:/[1] Cha backup/[21] Workspace_PhoenixonControls/Formation Channel/power_cpu1/phoenixon/app_formation/bsp/bsp_ad7606.c" \
+"F:/[1] Cha backup/[21] Workspace_PhoenixonControls/Formation Channel/power_cpu1/phoenixon/app_formation/bsp/bsp_io.c" 
+
+

@@ -15,12 +15,12 @@
 #pragma CODE_SECTION(drv_irq_CANA, ".TI.ramfunc");
 
 const DrvCanInitVal drv_can_init = {
-                                    .module = CANA_BASE,
-                                    .bit_rate = 500000, //500000 = 500kbps, 1000000 = 1Mbps
+                                    .module     = CANA_BASE,
+                                    .bit_rate   = 500000,       //500000 = 500kbps, 1000000 = 1Mbps
 };
 
 extern AppBoardState op;
-//#define CAN_MAX_CHANNEL MAX_CHANNEL+DUMMY_CHANNEL
+
 DrvCanMsg drv_can_msg;
 DrvCanMsg drv_can_msg_dummy;
 
@@ -38,38 +38,37 @@ void drv_InitCANMsgObj(void)
     int i;
     memset(&drv_can_msg, NULL, sizeof(DrvCanMsg));
 
-
     for(i=0; i<MAX_CHANNEL; i++) //up to object number:16
     {
-        //I/F -> Power, command
+    //I/F -> Power, command
         drv_can_msg.obj[1+i*5].obj_id = 1+i*5;
         drv_can_msg.obj[1+i*5].can_id = 0x100+(i*0x100);
         drv_can_msg.obj[1+i*5].type = CAN_MSG_OBJ_TYPE_TX;
         drv_can_msg.obj[1+i*5].flag = CAN_MSG_OBJ_NO_FLAGS;
         drv_can_msg.obj[1+i*5].cnt = 0;
 
-        //I/F -> Power, command
+    //I/F -> Power, command
         drv_can_msg.obj[2+i*5].obj_id = 2+i*5;
         drv_can_msg.obj[2+i*5].can_id = 0xAA+(i*0x10);;
         drv_can_msg.obj[2+i*5].type = CAN_MSG_OBJ_TYPE_TX;
         drv_can_msg.obj[2+i*5].flag = CAN_MSG_OBJ_NO_FLAGS;
         drv_can_msg.obj[2+i*5].cnt = 0;
 
-        //Power -> I/F, stats
+    //Power -> I/F, stats
         drv_can_msg.obj[3+i*5].obj_id = 3+i*5;
         drv_can_msg.obj[3+i*5].can_id = 0x110+(i*0x100);
         drv_can_msg.obj[3+i*5].type = CAN_MSG_OBJ_TYPE_RX;
         drv_can_msg.obj[3+i*5].flag = CAN_MSG_OBJ_RX_INT_ENABLE;
         drv_can_msg.obj[3+i*5].cnt = 0;
 
-        //Power -> I/F, erro
+    //Power -> I/F, erro
         drv_can_msg.obj[4+i*5].obj_id = 4+i*5;
         drv_can_msg.obj[4+i*5].can_id = 0x120+(i*0x100);
         drv_can_msg.obj[4+i*5].type = CAN_MSG_OBJ_TYPE_RX;
         drv_can_msg.obj[4+i*5].flag = CAN_MSG_OBJ_RX_INT_ENABLE;
         drv_can_msg.obj[4+i*5].cnt = 0;
 
-        //Thermal
+    //Thermal
         drv_can_msg.obj[5+i*5].obj_id = 5+i*5;
         drv_can_msg.obj[5+i*5].can_id = 0x130+(i*0x100);
         drv_can_msg.obj[5+i*5].type = CAN_MSG_OBJ_TYPE_RX;
@@ -120,31 +119,22 @@ void drv_WriteCAN(uint32_t id, Uint16 *data, Uint16 size)
     CAN_sendMessage(drv_can_init.module, id, 8, data_temp);
 }
 
-//
-// CAN ISR - The interrupt service routine called when a CAN interrupt is
-//           triggered.  It checks for the cause of the interrupt, and
-//           maintains a count of all messages that have been transmitted.
-//
 __interrupt void drv_irq_CANA(void)
 {
     uint32_t status;
     Uint16 i;
-    //XXX 보드 ID 별로 갈라쳐줘야할거 같음
-    // Read the CAN interrupt status to find the cause of the interrupt
+
+    // Read the CAN interrupt status
     status = CAN_getInterruptCause(drv_can_init.module);
 
     // If the cause is a controller status interrupt, then get the status
     if (status == CAN_INT_INT0ID_STATUS) {
-        // Read the controller status.  This will return a field of status
-        // error bits that can indicate various errors.  Error processing
-        // is not done in this example for simplicity.  Refer to the
-        // API documentation for details about the error status bits.
-        // The act of reading this status will clear the interrupt.
         status = CAN_getStatus(drv_can_init.module);
 
-        // Check to see if an error occurred.
-        if (((status & ~(CAN_STATUS_TXOK | CAN_STATUS_RXOK)) != 7) && ((status & ~(CAN_STATUS_TXOK | CAN_STATUS_RXOK)) != 0)) {
-            // Set a flag to indicate some errors may have occurred.
+    // Check to see if an error occurred.
+        if (((status & ~(CAN_STATUS_TXOK | CAN_STATUS_RXOK)) != 7)
+                && ((status & ~(CAN_STATUS_TXOK | CAN_STATUS_RXOK)) != 0)) {
+    // Set a flag to indicate some errors may have occurred.
             drv_can_msg.error_cnt++;
         }
     } else {

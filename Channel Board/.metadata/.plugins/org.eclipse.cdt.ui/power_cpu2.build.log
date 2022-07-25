@@ -1,0 +1,8 @@
+
+**** Build of configuration 28377D_CPU2_V304 for project power_cpu2 ****
+
+"C:\\ti\\ccs1031\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'power_cpu2.out' is up to date.
+
+**** Build Finished ****

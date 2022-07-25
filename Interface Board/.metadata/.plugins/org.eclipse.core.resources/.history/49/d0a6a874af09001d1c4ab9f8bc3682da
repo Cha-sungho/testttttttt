@@ -1,0 +1,26 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../phoenixon/utils/ringbuf/ring_buffer.c 
+
+C_DEPS += \
+./phoenixon/utils/ringbuf/ring_buffer.d 
+
+OBJS += \
+./phoenixon/utils/ringbuf/ring_buffer.obj 
+
+OBJS__QUOTED += \
+"phoenixon\utils\ringbuf\ring_buffer.obj" 
+
+C_DEPS__QUOTED += \
+"phoenixon\utils\ringbuf\ring_buffer.d" 
+
+C_SRCS__QUOTED += \
+"../phoenixon/utils/ringbuf/ring_buffer.c" 
+
+

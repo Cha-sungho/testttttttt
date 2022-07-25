@@ -1,0 +1,283 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+CG_TOOL_ROOT := C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS
+
+GEN_OPTS__FLAG := 
+GEN_CMDS__FLAG := 
+
+ORDERED_OBJS += \
+"./main_cpu1.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_Adc.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_CpuTimers.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_DBGIER.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_DefaultISR.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_Dma.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_ECap.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_EPwm.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_EQep.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_Emif.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_GlobalVariableDefs.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_Gpio.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_I2C.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc_Driver.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc_Driver_Lite.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_Ipc_Driver_Util.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_Mcbsp.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_PieCtrl.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_PieVect.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_Sci.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_Spi.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_SysCtrl.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_TempSensorConv.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_Upp.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_can.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_sci_io.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_sdfm_drivers.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_struct.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/F2837xD_usDelay.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/device/F2837xD_CodeStartBranch.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/device/device.obj" \
+"./dsp/c2000_sdk/v400/f2837xd/libraries/flash_api/f2837xd/source/Fapi_UserDefinedFunctions.obj" \
+"./easyDSP/easy28x_driverlib_v10.1.obj" \
+"./phoenixon/app_formation/app/app_op.obj" \
+"./phoenixon/app_formation/app/app_settings.obj" \
+"./phoenixon/app_formation/app/calibration/app_calibration.obj" \
+"./phoenixon/app_formation/app/comm/app_comm.obj" \
+"./phoenixon/app_formation/app/control/app_ctrl_dcdc.obj" \
+"./phoenixon/app_formation/app/control/app_ctrl_power.obj" \
+"./phoenixon/app_formation/app/control/app_pid.obj" \
+"./phoenixon/app_formation/app/safety/app_safety.obj" \
+"./phoenixon/app_formation/app/sense/app_sense.obj" \
+"./phoenixon/app_formation/app/test/app_test.obj" \
+"./phoenixon/app_formation/app/tick/app_tick.obj" \
+"./phoenixon/app_formation/bsp/bsp_ad7606.obj" \
+"./phoenixon/app_formation/bsp/bsp_io.obj" \
+"./phoenixon/app_formation/drv/drv_adc.obj" \
+"./phoenixon/app_formation/drv/drv_can.obj" \
+"./phoenixon/app_formation/drv/drv_emif.obj" \
+"./phoenixon/app_formation/drv/drv_gpio.obj" \
+"./phoenixon/app_formation/drv/drv_pwm.obj" \
+"./phoenixon/app_formation/drv/drv_timer.obj" \
+"./phoenixon/utils/ringbuffer.obj" \
+"./phoenixon/utils/util_adc.obj" \
+"./phoenixon/utils/util_sort.obj" \
+"../dsp/c2000_sdk/v400/f2837xd/libraries/flash_api/f2837xd/lib/F021_API_F2837xD_FPU32.lib" \
+"../dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Debug/driverlib.lib" \
+"../dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Debug/driverlib_coff.lib" \
+"../dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Debug/driverlib_eabi.lib" \
+"../dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Release/driverlib.lib" \
+"../dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Release/driverlib_coff.lib" \
+"../dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Release/driverlib_eabi.lib" \
+"../dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28.lib" \
+"../dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28_coff.lib" \
+"../dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28_driverlib.lib" \
+"../dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28_driverlib_coff.lib" \
+"../dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28_driverlib_eabi.lib" \
+"../dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/SFO_v8_fpu_lib_build_c28_eabi.lib" \
+"../dsp/c2000_sdk/v400/f2837xd/libraries/flash_api/f2837xd/lib/F021_API_F2837xD.lib" \
+"../dsp/c2000_sdk/v400/f2837xd/libraries/flash_api/f2837xd/lib/F021_API_F2837xD_EABI.lib" \
+"../dsp/c2000_sdk/v400/f2837xd/libraries/flash_api/f2837xd/lib/F021_API_F2837xD_FPU32_EABI.lib" \
+"../dsp/cmd/2837xD_FLASH_lnk_cpu1.cmd" \
+"../dsp/cmd/F2837xD_Headers_nonBIOS_cpu1.cmd" \
+$(GEN_CMDS__FLAG) \
+-llibc.a \
+
+-include ../makefile.init
+
+RM := DEL /F
+RMDIR := RMDIR /S/Q
+
+# All of the sources participating in the build are defined here
+-include sources.mk
+-include subdir_vars.mk
+-include dsp/c2000_sdk/v400/f2837xd/subdir_vars.mk
+-include dsp/c2000_sdk/v400/f2837xd/device/subdir_vars.mk
+-include dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Debug/subdir_vars.mk
+-include dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Release/subdir_vars.mk
+-include dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/subdir_vars.mk
+-include dsp/c2000_sdk/v400/f2837xd/libraries/flash_api/f2837xd/lib/subdir_vars.mk
+-include dsp/c2000_sdk/v400/f2837xd/libraries/flash_api/f2837xd/source/subdir_vars.mk
+-include dsp/cmd/subdir_vars.mk
+-include easyDSP/subdir_vars.mk
+-include phoenixon/app_formation/app/subdir_vars.mk
+-include phoenixon/app_formation/app/calibration/subdir_vars.mk
+-include phoenixon/app_formation/app/comm/subdir_vars.mk
+-include phoenixon/app_formation/app/control/subdir_vars.mk
+-include phoenixon/app_formation/app/safety/subdir_vars.mk
+-include phoenixon/app_formation/app/sense/subdir_vars.mk
+-include phoenixon/app_formation/app/test/subdir_vars.mk
+-include phoenixon/app_formation/app/tick/subdir_vars.mk
+-include phoenixon/app_formation/bsp/subdir_vars.mk
+-include phoenixon/app_formation/drv/subdir_vars.mk
+-include phoenixon/utils/subdir_vars.mk
+-include subdir_rules.mk
+-include dsp/c2000_sdk/v400/f2837xd/subdir_rules.mk
+-include dsp/c2000_sdk/v400/f2837xd/device/subdir_rules.mk
+-include dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Debug/subdir_rules.mk
+-include dsp/c2000_sdk/v400/f2837xd/device/driverlib/ccs/Release/subdir_rules.mk
+-include dsp/c2000_sdk/v400/f2837xd/libraries/calibration/hrpwm/f2837xd/lib/subdir_rules.mk
+-include dsp/c2000_sdk/v400/f2837xd/libraries/flash_api/f2837xd/lib/subdir_rules.mk
+-include dsp/c2000_sdk/v400/f2837xd/libraries/flash_api/f2837xd/source/subdir_rules.mk
+-include dsp/cmd/subdir_rules.mk
+-include easyDSP/subdir_rules.mk
+-include phoenixon/app_formation/app/subdir_rules.mk
+-include phoenixon/app_formation/app/calibration/subdir_rules.mk
+-include phoenixon/app_formation/app/comm/subdir_rules.mk
+-include phoenixon/app_formation/app/control/subdir_rules.mk
+-include phoenixon/app_formation/app/safety/subdir_rules.mk
+-include phoenixon/app_formation/app/sense/subdir_rules.mk
+-include phoenixon/app_formation/app/test/subdir_rules.mk
+-include phoenixon/app_formation/app/tick/subdir_rules.mk
+-include phoenixon/app_formation/bsp/subdir_rules.mk
+-include phoenixon/app_formation/drv/subdir_rules.mk
+-include phoenixon/utils/subdir_rules.mk
+-include objects.mk
+
+ifneq ($(MAKECMDGOALS),clean)
+ifneq ($(strip $(C55_DEPS)),)
+-include $(C55_DEPS)
+endif
+ifneq ($(strip $(C_UPPER_DEPS)),)
+-include $(C_UPPER_DEPS)
+endif
+ifneq ($(strip $(S67_DEPS)),)
+-include $(S67_DEPS)
+endif
+ifneq ($(strip $(S62_DEPS)),)
+-include $(S62_DEPS)
+endif
+ifneq ($(strip $(S_DEPS)),)
+-include $(S_DEPS)
+endif
+ifneq ($(strip $(OPT_DEPS)),)
+-include $(OPT_DEPS)
+endif
+ifneq ($(strip $(C??_DEPS)),)
+-include $(C??_DEPS)
+endif
+ifneq ($(strip $(ASM_UPPER_DEPS)),)
+-include $(ASM_UPPER_DEPS)
+endif
+ifneq ($(strip $(S??_DEPS)),)
+-include $(S??_DEPS)
+endif
+ifneq ($(strip $(C64_DEPS)),)
+-include $(C64_DEPS)
+endif
+ifneq ($(strip $(CXX_DEPS)),)
+-include $(CXX_DEPS)
+endif
+ifneq ($(strip $(S64_DEPS)),)
+-include $(S64_DEPS)
+endif
+ifneq ($(strip $(INO_DEPS)),)
+-include $(INO_DEPS)
+endif
+ifneq ($(strip $(CLA_DEPS)),)
+-include $(CLA_DEPS)
+endif
+ifneq ($(strip $(S55_DEPS)),)
+-include $(S55_DEPS)
+endif
+ifneq ($(strip $(SV7A_DEPS)),)
+-include $(SV7A_DEPS)
+endif
+ifneq ($(strip $(C62_DEPS)),)
+-include $(C62_DEPS)
+endif
+ifneq ($(strip $(C67_DEPS)),)
+-include $(C67_DEPS)
+endif
+ifneq ($(strip $(PDE_DEPS)),)
+-include $(PDE_DEPS)
+endif
+ifneq ($(strip $(K_DEPS)),)
+-include $(K_DEPS)
+endif
+ifneq ($(strip $(C_DEPS)),)
+-include $(C_DEPS)
+endif
+ifneq ($(strip $(CC_DEPS)),)
+-include $(CC_DEPS)
+endif
+ifneq ($(strip $(C++_DEPS)),)
+-include $(C++_DEPS)
+endif
+ifneq ($(strip $(C43_DEPS)),)
+-include $(C43_DEPS)
+endif
+ifneq ($(strip $(S43_DEPS)),)
+-include $(S43_DEPS)
+endif
+ifneq ($(strip $(ASM_DEPS)),)
+-include $(ASM_DEPS)
+endif
+ifneq ($(strip $(S_UPPER_DEPS)),)
+-include $(S_UPPER_DEPS)
+endif
+ifneq ($(strip $(CPP_DEPS)),)
+-include $(CPP_DEPS)
+endif
+ifneq ($(strip $(SA_DEPS)),)
+-include $(SA_DEPS)
+endif
+endif
+
+-include ../makefile.defs
+
+# Add inputs and outputs from these tool invocations to the build variables 
+EXE_OUTPUTS += \
+power_cpu1.out \
+
+EXE_OUTPUTS__QUOTED += \
+"power_cpu1.out" \
+
+BIN_OUTPUTS += \
+power_cpu1.hex \
+
+BIN_OUTPUTS__QUOTED += \
+"power_cpu1.hex" \
+
+
+# All Target
+all: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
+	@$(MAKE) --no-print-directory -Onone "power_cpu1.out"
+
+# Tool invocations
+power_cpu1.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
+	@echo 'Building target: "$@"'
+	@echo 'Invoking: C2000 Linker'
+	"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -Ooff --fp_mode=strict --advice:performance=all --define=ccs_c2k --define=_STANDALONE --define=DEBUG --define=_28377D --define=_DUAL_HEADERS --define=_FLASH --define=CPU1 -g --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"power_cpu1.map" --heap_size=0x200 --stack_size=0x100 --warn_sections -i"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/lib" -i"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="power_cpu1_linkInfo.xml" --rom_model -o "power_cpu1.out" $(ORDERED_OBJS)
+	@echo 'Finished building target: "$@"'
+	@echo ' '
+
+power_cpu1.hex: $(EXE_OUTPUTS)
+	@echo 'Building secondary target: "$@"'
+	@echo 'Invoking: C2000 Hex Utility'
+	"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/hex2000" --diag_wrap=off -o "power_cpu1.hex" $(EXE_OUTPUTS__QUOTED)
+	@echo 'Finished building secondary target: "$@"'
+	@echo ' '
+
+# Other Targets
+clean:
+	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
+	-$(RM) "main_cpu1.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Adc.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_CpuTimers.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_DBGIER.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_DefaultISR.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Dma.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_ECap.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_EPwm.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_EQep.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Emif.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_GlobalVariableDefs.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Gpio.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_I2C.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Ipc.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Ipc_Driver.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Ipc_Driver_Lite.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Ipc_Driver_Util.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Mcbsp.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_PieCtrl.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_PieVect.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Sci.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Spi.obj" 
+	-$(RM) "dsp\c2000_sdk\v400\f2837xd\F2837xD_SysCtrl.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_TempSensorConv.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Upp.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_can.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_sci_io.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_sdfm_drivers.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_struct.obj" "dsp\c2000_sdk\v400\f2837xd\F2837xD_usDelay.obj" "dsp\c2000_sdk\v400\f2837xd\device\F2837xD_CodeStartBranch.obj" "dsp\c2000_sdk\v400\f2837xd\device\device.obj" "dsp\c2000_sdk\v400\f2837xd\libraries\flash_api\f2837xd\source\Fapi_UserDefinedFunctions.obj" "easyDSP\easy28x_driverlib_v10.1.obj" "phoenixon\app_formation\app\app_op.obj" "phoenixon\app_formation\app\app_settings.obj" "phoenixon\app_formation\app\calibration\app_calibration.obj" "phoenixon\app_formation\app\comm\app_comm.obj" "phoenixon\app_formation\app\control\app_ctrl_dcdc.obj" "phoenixon\app_formation\app\control\app_ctrl_power.obj" "phoenixon\app_formation\app\control\app_pid.obj" "phoenixon\app_formation\app\safety\app_safety.obj" 
+	-$(RM) "phoenixon\app_formation\app\sense\app_sense.obj" "phoenixon\app_formation\app\test\app_test.obj" "phoenixon\app_formation\app\tick\app_tick.obj" "phoenixon\app_formation\bsp\bsp_ad7606.obj" "phoenixon\app_formation\bsp\bsp_io.obj" "phoenixon\app_formation\drv\drv_adc.obj" "phoenixon\app_formation\drv\drv_can.obj" "phoenixon\app_formation\drv\drv_emif.obj" "phoenixon\app_formation\drv\drv_gpio.obj" "phoenixon\app_formation\drv\drv_pwm.obj" "phoenixon\app_formation\drv\drv_timer.obj" "phoenixon\utils\ringbuffer.obj" "phoenixon\utils\util_adc.obj" "phoenixon\utils\util_sort.obj" 
+	-$(RM) "main_cpu1.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Adc.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_CpuTimers.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_DefaultISR.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Dma.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_ECap.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_EPwm.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_EQep.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Emif.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_GlobalVariableDefs.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Gpio.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_I2C.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Ipc.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Ipc_Driver.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Ipc_Driver_Lite.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Ipc_Driver_Util.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Mcbsp.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_PieCtrl.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_PieVect.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Sci.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_Spi.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_SysCtrl.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_TempSensorConv.d" 
+	-$(RM) "dsp\c2000_sdk\v400\f2837xd\F2837xD_Upp.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_can.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_sci_io.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_sdfm_drivers.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_struct.d" "dsp\c2000_sdk\v400\f2837xd\device\device.d" "dsp\c2000_sdk\v400\f2837xd\libraries\flash_api\f2837xd\source\Fapi_UserDefinedFunctions.d" "easyDSP\easy28x_driverlib_v10.1.d" "phoenixon\app_formation\app\app_op.d" "phoenixon\app_formation\app\app_settings.d" "phoenixon\app_formation\app\calibration\app_calibration.d" "phoenixon\app_formation\app\comm\app_comm.d" "phoenixon\app_formation\app\control\app_ctrl_dcdc.d" "phoenixon\app_formation\app\control\app_ctrl_power.d" "phoenixon\app_formation\app\control\app_pid.d" "phoenixon\app_formation\app\safety\app_safety.d" "phoenixon\app_formation\app\sense\app_sense.d" "phoenixon\app_formation\app\test\app_test.d" "phoenixon\app_formation\app\tick\app_tick.d" "phoenixon\app_formation\bsp\bsp_ad7606.d" "phoenixon\app_formation\bsp\bsp_io.d" 
+	-$(RM) "phoenixon\app_formation\drv\drv_adc.d" "phoenixon\app_formation\drv\drv_can.d" "phoenixon\app_formation\drv\drv_emif.d" "phoenixon\app_formation\drv\drv_gpio.d" "phoenixon\app_formation\drv\drv_pwm.d" "phoenixon\app_formation\drv\drv_timer.d" "phoenixon\utils\ringbuffer.d" "phoenixon\utils\util_adc.d" "phoenixon\utils\util_sort.d" 
+	-$(RM) "dsp\c2000_sdk\v400\f2837xd\F2837xD_DBGIER.d" "dsp\c2000_sdk\v400\f2837xd\F2837xD_usDelay.d" "dsp\c2000_sdk\v400\f2837xd\device\F2837xD_CodeStartBranch.d" 
+	-@echo 'Finished clean'
+	-@echo ' '
+
+.PHONY: all clean dependents
+.SECONDARY:
+
+-include ../makefile.targets
+

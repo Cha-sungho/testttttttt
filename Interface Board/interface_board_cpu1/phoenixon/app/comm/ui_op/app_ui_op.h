@@ -33,38 +33,46 @@ typedef enum
 typedef struct
 {
     uint16_t sock_state;
+
     struct
     {
         CommOpHeadList head;
         uint16_t len;
         CommOpChannel channel;
+
         struct
         {
             uint16_t reserved[4];
             uint16_t cnt;
         } start[4];
+
         struct
         {
             uint16_t step_idx;
             uint16_t cnt;
         } jump[4];
+
         struct
         {
             CommOpCCmd cmd;
             uint16_t cnt;
         } command[4];
+
         struct
         {
             uint16_t step_idx;
             CommOpPCmd cmd;
             uint16_t cnt;
         } pause[4];
+
         uint16_t act_step_cnt;
         uint16_t remain_step_cnt;
         uint16_t remain_step_cnt_old;
         BOOL step_loaded;
     } recv;
+
    Uint64 step_load_time_out;
+
 } AppCommUIOpHandle_RX;
 
 typedef struct
@@ -74,10 +82,12 @@ typedef struct
         CommOpHeadList head;
         uint16_t len;
         CommOpChannel channel;
+
         struct
         {
             uint16_t cnt;
         } data;
+
         struct
         {
             CommOpHeadList head;
@@ -86,21 +96,25 @@ typedef struct
             uint16_t reserved[4];
             uint16_t cnt;
         } start;
+
         struct
         {
             uint16_t step_idx;
             uint16_t cnt;
         } jump;
+
         struct
         {
             CommOpCCmd cmd;
             uint16_t cnt;
         } command;
+
         struct
         {
             CommOpPCmd cmd;
             uint16_t cnt;
         } pause;
+
         struct
         {
             CommOpHeadList head;
@@ -110,15 +124,16 @@ typedef struct
             uint16_t data[8];
             uint16_t cnt;
         } alarm;
+
         struct
         {
             CommOpHeadList head;
             uint16_t len;
             CommOpChannel channel;
-//            uint16_t step_idx;
             uint16_t cnt;
         } end;
     } send;
+
 } AppCommUIOpHandle_TX;
 
 typedef struct
@@ -132,7 +147,6 @@ typedef struct
     CommOpHeadList head;
     AppCommUIOpErrList (*process)(uint8_t sock);
 } AppUICmdState;
-
 
 typedef struct
 {
